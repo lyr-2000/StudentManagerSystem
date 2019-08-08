@@ -1,7 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78c5a410-ccfa-4f9c-ac7e-677e8e8639b4" name="Default" comment="" />
+    <list default="true" id="78c5a410-ccfa-4f9c-ac7e-677e8e8639b4" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../javaWebProject3/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../javaWebProject3/.idea/libraries/Maven__com_google_code_gson_gson_2_8_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../javaWebProject3/.idea/libraries/Maven__taglibs_standard_1_1_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../javaWebProject3/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../javaWebProject3/src/main/java/servlet/ShowServlet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../javaWebProject3/src/main/java/servlet/addMemberHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../javaWebProject3/src/main/java/servlet/alterHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../javaWebProject3/src/main/java/servlet/delMemberHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../javaWebProject3/src/main/webapp/view/addMember.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../javaWebProject3/src/main/webapp/view/alterMember.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../javaWebProject3/src/main/webapp/view/detail.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../javaWebProject3/.idea/artifacts/javaWebProject3_war_exploded.xml" afterPath="$PROJECT_DIR$/../javaWebProject3/.idea/artifacts/javaWebProject3_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../javaWebProject3/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../javaWebProject3/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../javaWebProject3/javaWebProject3.iml" afterPath="$PROJECT_DIR$/../javaWebProject3/javaWebProject3.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../javaWebProject3/pom.xml" afterPath="$PROJECT_DIR$/../javaWebProject3/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../javaWebProject3/src/main/java/bean/Member.java" afterPath="$PROJECT_DIR$/../javaWebProject3/src/main/java/bean/Member.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../javaWebProject3/src/main/java/dao/Dao.java" afterPath="$PROJECT_DIR$/../javaWebProject3/src/main/java/dao/Dao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../javaWebProject3/src/main/java/dao/daoImpl/MemberDao.java" afterPath="$PROJECT_DIR$/../javaWebProject3/src/main/java/dao/daoImpl/MemberDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../javaWebProject3/src/main/java/filter/FilterCharsetEncoding.java" afterPath="$PROJECT_DIR$/../javaWebProject3/src/main/java/filter/FilterCharsetEncoding.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../javaWebProject3/src/main/java/servlet/ServletLogin.java" afterPath="$PROJECT_DIR$/../javaWebProject3/src/main/java/servlet/ServletLogin.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../javaWebProject3/src/main/java/util/JdbcUtil.java" afterPath="$PROJECT_DIR$/../javaWebProject3/src/main/java/util/JdbcUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../javaWebProject3/src/main/java/util/QueryRunnerUtil.java" afterPath="$PROJECT_DIR$/../javaWebProject3/src/main/java/util/QueryRunnerUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../javaWebProject3/src/main/resources/c3p0-config.xml" afterPath="$PROJECT_DIR$/../javaWebProject3/src/main/resources/c3p0-config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../javaWebProject3/src/main/test/Test2.java" afterPath="$PROJECT_DIR$/../javaWebProject3/src/main/test/Test2.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../javaWebProject3/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/../javaWebProject3/src/main/webapp/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../javaWebProject3/src/main/webapp/view/home.jsp" afterPath="$PROJECT_DIR$/../javaWebProject3/src/main/webapp/view/home.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../javaWebProject3/src/main/webapp/view/showMember.jsp" afterPath="$PROJECT_DIR$/../javaWebProject3/src/main/webapp/view/showMember.jsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../javaWebProject3/.idea/libraries/Maven__com_mchange_c3p0_0_9_5_2.xml" afterPath="$PROJECT_DIR$/../javaWebProject3/.idea/libraries/Maven__com_mchange_c3p0_0_9_5_3.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../javaWebProject3/.idea/libraries/Maven__com_mchange_mchange_commons_java_0_2_11.xml" afterPath="$PROJECT_DIR$/../javaWebProject3/.idea/libraries/Maven__com_mchange_mchange_commons_java_0_2_15.xml" />
+    </list>
     <ignored path="$PROJECT_DIR$/../javaWebProject3/out/" />
     <ignored path="$PROJECT_DIR$/../javaWebProject3/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,63 +58,27 @@
     <favorites_list name="javaWebProject3" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6943292">
+    <splitter split-orientation="horizontal" split-proportion="0.39100817">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-          <file leaf-file-name="Test1.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/test/Test1.java">
+          <file leaf-file-name="ServletLogin.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/java/servlet/ServletLogin.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="115">
-                  <caret line="5" column="33" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="33" />
+                <state relative-caret-position="552">
+                  <caret line="31" column="18" lean-forward="false" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
                   <folding>
-                    <element signature="imports" expanded="true" />
-                    <marker date="1565008919147" expanded="true" signature="949:965" ph="SELECT * FRO... Me" />
+                    <element signature="imports" expanded="false" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Test2.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/test/Test2.java">
+          <file leaf-file-name="showMember.jsp" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/webapp/view/showMember.jsp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="171">
-                  <caret line="50" column="45" lean-forward="false" selection-start-line="50" selection-start-column="45" selection-end-line="50" selection-end-column="45" />
-                  <folding>
-                    <element signature="n#!!doc" expanded="true" />
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Member.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/java/bean/Member.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="84">
-                  <caret line="39" column="40" lean-forward="true" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="40" />
-                  <folding>
-                    <element signature="e#359#360#0" expanded="true" />
-                    <element signature="e#390#391#0" expanded="true" />
-                    <element signature="e#438#439#0" expanded="true" />
-                    <element signature="e#478#479#0" expanded="true" />
-                    <element signature="e#509#510#0" expanded="true" />
-                    <element signature="e#536#537#0" expanded="true" />
-                    <element signature="e#576#577#0" expanded="true" />
-                    <element signature="e#608#609#0" expanded="true" />
-                    <element signature="e#745#746#0" expanded="true" />
-                    <element signature="e#840#841#0" expanded="true" />
-                    <element signature="e#870#871#0" expanded="true" />
-                    <element signature="e#969#970#0" expanded="true" />
-                    <element signature="e#1001#1002#0" expanded="true" />
-                    <element signature="e#1120#1121#0" expanded="true" />
-                    <element signature="e#1162#1163#0" expanded="true" />
-                    <element signature="e#1273#1274#0" expanded="true" />
-                    <element signature="e#1311#1312#0" expanded="true" />
-                    <element signature="e#1426#1427#0" expanded="true" />
-                    <element signature="e#1466#1467#0" expanded="true" />
-                    <element signature="e#1557#1558#0" expanded="true" />
-                    <element signature="e#1585#1586#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="524">
+                  <caret line="93" column="19" lean-forward="true" selection-start-line="93" selection-start-column="19" selection-end-line="93" selection-end-column="19" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -92,9 +86,90 @@
           <file leaf-file-name="Dao.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/java/dao/Dao.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="266">
-                  <caret line="21" column="20" lean-forward="true" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+                <state relative-caret-position="598">
+                  <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+                  <folding>
+                    <element signature="imports" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="alterHandler.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/java/servlet/alterHandler.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1472">
+                  <caret line="74" column="21" lean-forward="false" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="21" />
+                  <folding>
+                    <element signature="imports" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="addMember.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/webapp/view/addMember.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="92">
+                  <caret line="4" column="15" lean-forward="false" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
                   <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="alterMember.jsp" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/webapp/view/alterMember.jsp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="2507">
+                  <caret line="109" column="38" lean-forward="false" selection-start-line="109" selection-start-column="38" selection-end-line="109" selection-end-column="38" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Member.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/java/bean/Member.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1035">
+                  <caret line="61" column="9" lean-forward="false" selection-start-line="61" selection-start-column="9" selection-end-line="61" selection-end-column="9" />
+                  <folding>
+                    <element signature="e#388#389#0" expanded="false" />
+                    <element signature="e#419#420#0" expanded="false" />
+                    <element signature="e#467#468#0" expanded="false" />
+                    <element signature="e#507#508#0" expanded="false" />
+                    <element signature="e#542#543#0" expanded="false" />
+                    <element signature="e#573#574#0" expanded="false" />
+                    <element signature="e#621#622#0" expanded="false" />
+                    <element signature="e#661#662#0" expanded="false" />
+                    <element signature="e#692#693#0" expanded="false" />
+                    <element signature="e#719#720#0" expanded="false" />
+                    <element signature="e#759#760#0" expanded="false" />
+                    <element signature="e#791#792#0" expanded="false" />
+                    <element signature="e#894#895#0" expanded="false" />
+                    <element signature="e#928#929#0" expanded="false" />
+                    <element signature="e#1023#1024#0" expanded="false" />
+                    <element signature="e#1053#1054#0" expanded="false" />
+                    <element signature="e#1303#1304#0" expanded="false" />
+                    <element signature="e#1345#1346#0" expanded="false" />
+                    <element signature="e#1456#1457#0" expanded="false" />
+                    <element signature="e#1494#1495#0" expanded="false" />
+                    <element signature="e#1609#1610#0" expanded="false" />
+                    <element signature="e#1649#1650#0" expanded="false" />
+                    <element signature="e#1740#1741#0" expanded="false" />
+                    <element signature="e#1768#1769#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ShowServlet.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/java/servlet/ShowServlet.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1012">
+                  <caret line="59" column="48" lean-forward="false" selection-start-line="59" selection-start-column="48" selection-end-line="59" selection-end-column="48" />
+                  <folding>
+                    <element signature="imports" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -102,36 +177,22 @@
           <file leaf-file-name="MemberDao.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/java/dao/daoImpl/MemberDao.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="138">
-                  <caret line="41" column="22" lean-forward="false" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
+                <state relative-caret-position="943">
+                  <caret line="50" column="33" lean-forward="false" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="33" />
                   <folding>
-                    <element signature="imports" expanded="true" />
+                    <element signature="imports" expanded="false" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="JdbcUtil.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/java/util/JdbcUtil.java">
+          <file leaf-file-name="addMemberHandler.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/java/servlet/addMemberHandler.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="337">
-                  <caret line="28" column="36" lean-forward="false" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+                <state relative-caret-position="805">
+                  <caret line="45" column="31" lean-forward="false" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
                   <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="QueryRunnerUtil.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/java/util/QueryRunnerUtil.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-39">
-                  <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#459#460#0" expanded="true" />
-                    <element signature="e#501#502#0" expanded="true" />
+                    <element signature="imports" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -141,55 +202,32 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-          <file leaf-file-name="ServletLogin.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/java/servlet/ServletLogin.java">
+          <file leaf-file-name="alterMember.jsp" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/webapp/view/alterMember.jsp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="207">
-                  <caret line="9" column="27" lean-forward="false" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="c3p0-config.xml" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/resources/c3p0-config.xml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="263">
-                  <caret line="17" column="54" lean-forward="true" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
+                <state relative-caret-position="4761">
+                  <caret line="207" column="15" lean-forward="false" selection-start-line="207" selection-start-column="15" selection-end-line="207" selection-end-column="15" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="DriverManager.java" pinned="false" current-in-tab="false">
-            <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/sql/DriverManager.java">
+          <file leaf-file-name="detail.jsp" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/webapp/view/detail.jsp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="6486">
-                  <caret line="313" column="36" lean-forward="false" selection-start-line="313" selection-start-column="36" selection-end-line="313" selection-end-column="36" />
-                  <folding>
-                    <element signature="e#0#26959#0" expanded="false" />
-                    <element signature="imports" expanded="false" />
-                    <element signature="e#4492#4493#0" expanded="false" />
-                    <element signature="e#4528#4529#0" expanded="false" />
-                    <element signature="e#17838#17839#0" expanded="false" />
-                    <element signature="e#17876#17877#0" expanded="false" />
-                    <element signature="e#18136#18137#0" expanded="false" />
-                    <element signature="e#18173#18174#0" expanded="false" />
-                    <element signature="e#19826#19827#0" expanded="false" />
-                    <element signature="e#19858#19859#0" expanded="false" />
-                    <element signature="e#21335#21500#0" expanded="false" />
-                    <element signature="e#21499#21500#0" expanded="false" />
-                    <element signature="e#21858#23134#0" expanded="false" />
-                    <element signature="e#23133#23134#0" expanded="false" />
-                    <element signature="e#26755#26756#0" expanded="false" />
-                    <element signature="e#26795#26796#0" expanded="false" />
-                    <element signature="e#26841#26842#0" expanded="false" />
-                    <element signature="e#26901#26902#0" expanded="false" />
-                    <element signature="e#26930#26931#0" expanded="false" />
-                    <element signature="e#26955#26956#0" expanded="false" />
-                  </folding>
+                <state relative-caret-position="289">
+                  <caret line="54" column="19" lean-forward="true" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/webapp/index.jsp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="23">
+                  <caret line="1" column="6" lean-forward="false" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -202,9 +240,11 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit4 Test Class" />
-        <option value="Jsp File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="HTML File" />
+        <option value="jsf" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -213,7 +253,28 @@
       <find>json</find>
       <find>c3p0</find>
       <find>junit</find>
+      <find>c3</find>
+      <find>javax.servlet</find>
+      <find>jstl</find>
+      <find>getSubj</find>
+      <find>num</find>
+      <find>parent</find>
+      <find>成功触发</find>
+      <find>触发</find>
+      <find>成功</find>
+      <find>成功</find>
+      <find>phone</find>
+      <find>birthday</find>
+      <find>getJoin</find>
+      <find>qyert</find>
+      <find>queryById</find>
+      <find>joinTime</find>
+      <find>arr</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="REBASE" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../javaWebProject3" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -223,9 +284,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../javaWebProject3/src/main/java/filter/FilterCharsetEncoding.java" />
-        <option value="$PROJECT_DIR$/../javaWebProject3/src/main/java/servlet/ServletLogin.java" />
-        <option value="$PROJECT_DIR$/../javaWebProject3/src/main/webapp/view/home.jsp" />
         <option value="$PROJECT_DIR$/../javaWebProject3/src/main/webapp/index.jsp" />
         <option value="$PROJECT_DIR$/../javaWebProject3/src/main/webapp/login.jsp" />
         <option value="$PROJECT_DIR$/../javaWebProject3/src/main/test/test1.java" />
@@ -235,20 +293,34 @@
         <option value="$PROJECT_DIR$/../javaWebProject3/src/main/java/dao/CateDao.java" />
         <option value="$PROJECT_DIR$/../javaWebProject3/src/main/java/dao/BookDao.java" />
         <option value="$PROJECT_DIR$/../javaWebProject3/src/c3p0-config.xml" />
-        <option value="$PROJECT_DIR$/../javaWebProject3/src/main/webapp/view/showMember.jsp" />
-        <option value="$PROJECT_DIR$/../javaWebProject3/pom.xml" />
         <option value="$PROJECT_DIR$/../javaWebProject3/src/main/test/Test1.java" />
         <option value="$PROJECT_DIR$/../javaWebProject3/src/main/java/bean/Cate.java" />
         <option value="$PROJECT_DIR$/../javaWebProject3/src/main/java/bean/Book.java" />
-        <option value="$PROJECT_DIR$/../javaWebProject3/src/main/java/util/QueryRunnerUtil.java" />
         <option value="$PROJECT_DIR$/../javaWebProject3/src/main/java/dao/daoImpl/memberDao.java" />
         <option value="$PROJECT_DIR$/../javaWebProject3/src/main/java/bean/member.java" />
-        <option value="$PROJECT_DIR$/../javaWebProject3/src/main/java/dao/Dao.java" />
-        <option value="$PROJECT_DIR$/../javaWebProject3/src/main/java/dao/daoImpl/MemberDao.java" />
-        <option value="$PROJECT_DIR$/../javaWebProject3/src/main/resources/c3p0-config.xml" />
-        <option value="$PROJECT_DIR$/../javaWebProject3/src/main/java/util/JdbcUtil.java" />
-        <option value="$PROJECT_DIR$/../javaWebProject3/src/main/test/Test2.java" />
+        <option value="$PROJECT_DIR$/../javaWebProject3/pom.xml" />
+        <option value="$PROJECT_DIR$/../javaWebProject3/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/../javaWebProject3/src/main/java/bean/Member.java" />
+        <option value="$MAVEN_REPOSITORY$/commons-dbutils/commons-dbutils/1.6/commons-dbutils-1.6.jar!/org/apache/commons/dbutils/AbstractQueryRunner.class" />
+        <option value="$MAVEN_REPOSITORY$/commons-dbutils/commons-dbutils/1.6/commons-dbutils-1.6.jar!/org/apache/commons/dbutils/QueryRunner.class" />
+        <option value="$PROJECT_DIR$/../javaWebProject3/src/main/java/filter/FilterCharsetEncoding.java" />
+        <option value="$PROJECT_DIR$/../javaWebProject3/src/main/resources/c3p0-config.xml" />
+        <option value="$PROJECT_DIR$/../javaWebProject3/src/main/webapp/view/home.jsp" />
+        <option value="$PROJECT_DIR$/../javaWebProject3/src/main/test/Test2.java" />
+        <option value="$PROJECT_DIR$/../javaWebProject3/src/main/java/util/JdbcUtil.java" />
+        <option value="$PROJECT_DIR$/../javaWebProject3/src/main/java/util/QueryRunnerUtil.java" />
+        <option value="$PROJECT_DIR$/../javaWebProject3/src/main/java/servlet/ServletLogin.java" />
+        <option value="$PROJECT_DIR$/../javaWebProject3/src/main/java/dao/Dao.java" />
+        <option value="$PROJECT_DIR$/../javaWebProject3/src/main/webapp/view/alterMember.xhtml" />
+        <option value="$PROJECT_DIR$/../javaWebProject3/src/main/webapp/view/addMember.html" />
+        <option value="$PROJECT_DIR$/../javaWebProject3/src/main/java/servlet/delMemberHandler.java" />
+        <option value="$PROJECT_DIR$/../javaWebProject3/src/main/java/servlet/addMemberHandler.java" />
+        <option value="$PROJECT_DIR$/../javaWebProject3/src/main/java/servlet/alterHandler.java" />
+        <option value="$PROJECT_DIR$/../javaWebProject3/src/main/java/dao/daoImpl/MemberDao.java" />
+        <option value="$PROJECT_DIR$/../javaWebProject3/src/main/java/servlet/ShowServlet.java" />
+        <option value="$PROJECT_DIR$/../javaWebProject3/src/main/webapp/view/showMember.jsp" />
+        <option value="$PROJECT_DIR$/../javaWebProject3/src/main/webapp/view/alterMember.jsp" />
+        <option value="$PROJECT_DIR$/../javaWebProject3/src/main/webapp/view/detail.jsp" />
       </list>
     </option>
   </component>
@@ -294,11 +366,12 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="644" />
-    <option name="y" value="52" />
+    <option name="x" value="-5" />
+    <option name="y" value="90" />
     <option name="width" value="1942" />
-    <option name="height" value="978" />
+    <option name="height" value="893" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -315,7 +388,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -372,7 +444,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javaWebProject3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javaWebProject3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -413,6 +511,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -487,6 +589,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="filter" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -575,16 +681,18 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -619,98 +727,90 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.Test2.QueryAll">
-    <configuration default="false" name="Test1.demo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Tomcat Server.showMember.jsp">
+    <configuration default="false" name="addMember.html" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 8.0.511" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:80/view/addMember.html" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <deployment>
+        <artifact name="javaWebProject3:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="addMember_html_javaWebProject3" />
+        <option name="HTTP_PORT" value="80" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="javaWebProject3" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Test1" />
-      <option name="METHOD_NAME" value="demo" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="49847" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="javaWebProject3:war exploded" />
+        </option>
+      </method>
     </configuration>
-    <configuration default="false" name="Test1.demo2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="javaWebProject3" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Test1" />
-      <option name="METHOD_NAME" value="demo2" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="BookDao" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="dao.BookDao" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../javaWebProject3" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="javaWebProject3" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="Test2.QueryRunnerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="javaWebProject3" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Test2" />
-      <option name="METHOD_NAME" value="QueryRunnerTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="Test2.QueryAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Test2.add" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="javaWebProject3" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="Test2" />
-      <option name="METHOD_NAME" value="QueryAll" />
+      <option name="METHOD_NAME" value="add" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -723,6 +823,177 @@
       <envs />
       <patterns />
       <method />
+    </configuration>
+    <configuration default="false" name="showMember.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 8.0.511" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:80/view/showMember.jsp" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <deployment>
+        <artifact name="javaWebProject3:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="showMember_jsp_javaWebProject3" />
+        <option name="HTTP_PORT" value="80" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="4943" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="javaWebProject3:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="false" name="Test2.mm" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="javaWebProject3" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Test2" />
+      <option name="METHOD_NAME" value="mm" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="alterMember.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 8.0.511" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:80/view/alterMember.jsp" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <deployment>
+        <artifact name="javaWebProject3:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="alterMember_jsp_javaWebProject3" />
+        <option name="HTTP_PORT" value="80" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="28624" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="javaWebProject3:war exploded" />
+        </option>
+      </method>
     </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
       <deployment />
@@ -1221,19 +1492,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Unnamed" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.Test1.demo" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.Test1.demo2" />
-      <item index="3" class="java.lang.String" itemvalue="Application.BookDao" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.Test2.QueryRunnerTest" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.Test2.QueryAll" />
+      <item index="1" class="java.lang.String" itemvalue="Tomcat Server.addMember.html" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.Test2.add" />
+      <item index="3" class="java.lang.String" itemvalue="Tomcat Server.showMember.jsp" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.Test2.mm" />
+      <item index="5" class="java.lang.String" itemvalue="Tomcat Server.alterMember.jsp" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.Test2.QueryAll" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.Test2.QueryRunnerTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.Test1.demo2" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.Test1.demo" />
-        <item index="4" class="java.lang.String" itemvalue="Application.BookDao" />
+        <item index="0" class="java.lang.String" itemvalue="Tomcat Server.showMember.jsp" />
+        <item index="1" class="java.lang.String" itemvalue="Tomcat Server.addMember.html" />
+        <item index="2" class="java.lang.String" itemvalue="Tomcat Server.alterMember.jsp" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.Test2.mm" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.Test2.add" />
       </list>
     </recent_temporary>
   </component>
@@ -1252,44 +1523,48 @@
       <updated>1564934494865</updated>
       <workItem from="1564934498006" duration="11561000" />
       <workItem from="1564979632461" duration="6724000" />
-      <workItem from="1564996095811" duration="20054000" />
+      <workItem from="1564996095811" duration="23336000" />
+      <workItem from="1565064693056" duration="17741000" />
+      <workItem from="1565086362196" duration="22210000" />
+      <workItem from="1565156346869" duration="39305000" />
+      <workItem from="1565240491949" duration="1824000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Test1_demo2 - 2019.08.05 at 20h 41m 16s.xml">
-      <configuration name="Test1.demo2" configurationId="JUnit" />
+    <history-entry file="Test2_mm - 2019.08.07 at 14h 41m 06s.xml">
+      <configuration name="Test2.mm" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Test1_demo2 - 2019.08.05 at 21h 35m 21s.xml">
-      <configuration name="Test1.demo2" configurationId="JUnit" />
+    <history-entry file="Test2_mm - 2019.08.07 at 14h 46m 20s.xml">
+      <configuration name="Test2.mm" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Test2_QueryAll - 2019.08.06 at 00h 15m 49s.xml">
-      <configuration name="Test2.QueryAll" configurationId="JUnit" />
+    <history-entry file="Test2_mm - 2019.08.07 at 14h 46m 39s.xml">
+      <configuration name="Test2.mm" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Test2_QueryAll - 2019.08.06 at 00h 16m 45s.xml">
-      <configuration name="Test2.QueryAll" configurationId="JUnit" />
+    <history-entry file="Test2_mm - 2019.08.07 at 14h 47m 19s.xml">
+      <configuration name="Test2.mm" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Test2_QueryAll - 2019.08.06 at 00h 21m 24s.xml">
-      <configuration name="Test2.QueryAll" configurationId="JUnit" />
+    <history-entry file="Test2_mm - 2019.08.07 at 14h 49m 59s.xml">
+      <configuration name="Test2.mm" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Test2_QueryAll - 2019.08.06 at 00h 21m 47s.xml">
-      <configuration name="Test2.QueryAll" configurationId="JUnit" />
+    <history-entry file="Test2_mm - 2019.08.07 at 14h 50m 11s.xml">
+      <configuration name="Test2.mm" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Test2_QueryAll - 2019.08.06 at 00h 21m 58s.xml">
-      <configuration name="Test2.QueryAll" configurationId="JUnit" />
+    <history-entry file="Test2_mm - 2019.08.07 at 14h 50m 26s.xml">
+      <configuration name="Test2.mm" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Test2_QueryAll - 2019.08.06 at 00h 22m 24s.xml">
-      <configuration name="Test2.QueryAll" configurationId="JUnit" />
+    <history-entry file="Test2_mm - 2019.08.07 at 14h 53m 25s.xml">
+      <configuration name="Test2.mm" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Test2_QueryAll - 2019.08.06 at 00h 28m 39s.xml">
-      <configuration name="Test2.QueryAll" configurationId="JUnit" />
+    <history-entry file="Test2_mm - 2019.08.07 at 14h 53m 36s.xml">
+      <configuration name="Test2.mm" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Test2_QueryRunnerTest - 2019.08.05 at 22h 15m 50s.xml">
-      <configuration name="Test2.QueryRunnerTest" configurationId="JUnit" />
+    <history-entry file="Test2_mm - 2019.08.07 at 14h 53m 46s.xml">
+      <configuration name="Test2.mm" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38339000" />
+    <option name="totallyTimeSpent" value="122701000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1301,14 +1576,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="644" y="52" width="1942" height="978" extended-state="0" />
+    <frame x="-5" y="90" width="1942" height="893" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20742637" sideWeight="0.16862956" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.023781212" sideWeight="0.17867959" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.034796573" sideWeight="0.49438202" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.03937008" sideWeight="0.49438202" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1316,29 +1591,65 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.060471978" sideWeight="0.49785867" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33293697" sideWeight="0.49357602" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890856" sideWeight="0.49785867" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20742637" sideWeight="0.8313705" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.027298851" sideWeight="0.8213204" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19111349" sideWeight="0.70113087" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19111349" sideWeight="0.29886913" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3444302" sideWeight="0.49785867" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21413276" sideWeight="0.829023" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21413276" sideWeight="0.17097701" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3447514" sideWeight="0.49785867" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902467" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.034796573" sideWeight="0.505618" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3444302" sideWeight="0.49785867" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.023781212" sideWeight="0.17867959" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.03937008" sideWeight="0.49438202" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33293697" sideWeight="0.49357602" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890856" sideWeight="0.49785867" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.023781212" sideWeight="0.8213204" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902467" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.034796573" sideWeight="0.505618" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11326469" sideWeight="0.69427526" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11326469" sideWeight="0.30572474" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3444302" sideWeight="0.49785867" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -1348,7 +1659,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="11" />
+      <option name="time" value="21" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1357,6 +1668,16 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/java/servlet/ServletLogin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="667">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../javaWebProject3/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
@@ -1369,9 +1690,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="828">
           <caret line="41" column="35" lean-forward="false" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1395,7 +1713,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
           <caret line="10" column="24" lean-forward="false" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1403,10 +1720,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="759">
           <caret line="41" column="20" lean-forward="true" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1565008919147" expanded="true" signature="949:965" ph="SELECT * FRO... Me" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1415,7 +1728,7 @@
         <state relative-caret-position="414">
           <caret line="25" column="51" lean-forward="false" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1432,28 +1745,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6486">
           <caret line="313" column="36" lean-forward="false" selection-start-line="313" selection-start-column="36" selection-end-line="313" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#26959#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#4492#4493#0" expanded="false" />
-            <element signature="e#4528#4529#0" expanded="false" />
-            <element signature="e#17838#17839#0" expanded="false" />
-            <element signature="e#17876#17877#0" expanded="false" />
-            <element signature="e#18136#18137#0" expanded="false" />
-            <element signature="e#18173#18174#0" expanded="false" />
-            <element signature="e#19826#19827#0" expanded="false" />
-            <element signature="e#19858#19859#0" expanded="false" />
-            <element signature="e#21335#21500#0" expanded="false" />
-            <element signature="e#21499#21500#0" expanded="false" />
-            <element signature="e#21858#23134#0" expanded="false" />
-            <element signature="e#23133#23134#0" expanded="false" />
-            <element signature="e#26755#26756#0" expanded="false" />
-            <element signature="e#26795#26796#0" expanded="false" />
-            <element signature="e#26841#26842#0" expanded="false" />
-            <element signature="e#26901#26902#0" expanded="false" />
-            <element signature="e#26930#26931#0" expanded="false" />
-            <element signature="e#26955#26956#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1469,9 +1760,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="828">
           <caret line="41" column="35" lean-forward="false" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1487,7 +1775,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
           <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1504,16 +1791,6 @@
         <state relative-caret-position="414">
           <caret line="25" column="51" lean-forward="false" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/java/filter/FilterCharsetEncoding.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="828">
-          <caret line="41" column="35" lean-forward="false" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
-          <folding>
             <element signature="imports" expanded="false" />
           </folding>
         </state>
@@ -1523,21 +1800,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="1" column="513" lean-forward="true" selection-start-line="1" selection-start-column="513" selection-end-line="1" selection-end-column="513" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/webapp/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="851">
-          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1547,205 +1809,256 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1565008919147" expanded="true" signature="949:965" ph="SELECT * FRO... Me" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/sql/DriverManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6486">
-          <caret line="313" column="36" lean-forward="false" selection-start-line="313" selection-start-column="36" selection-end-line="313" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#26959#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#4492#4493#0" expanded="false" />
-            <element signature="e#4528#4529#0" expanded="false" />
-            <element signature="e#17838#17839#0" expanded="false" />
-            <element signature="e#17876#17877#0" expanded="false" />
-            <element signature="e#18136#18137#0" expanded="false" />
-            <element signature="e#18173#18174#0" expanded="false" />
-            <element signature="e#19826#19827#0" expanded="false" />
-            <element signature="e#19858#19859#0" expanded="false" />
-            <element signature="e#21335#21500#0" expanded="false" />
-            <element signature="e#21499#21500#0" expanded="false" />
-            <element signature="e#21858#23134#0" expanded="false" />
-            <element signature="e#23133#23134#0" expanded="false" />
-            <element signature="e#26755#26756#0" expanded="false" />
-            <element signature="e#26795#26796#0" expanded="false" />
-            <element signature="e#26841#26842#0" expanded="false" />
-            <element signature="e#26901#26902#0" expanded="false" />
-            <element signature="e#26930#26931#0" expanded="false" />
-            <element signature="e#26955#26956#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/java/dao/CateDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-230">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/java/dao/BookDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="236" column="28" lean-forward="false" selection-start-line="236" selection-start-column="28" selection-end-line="236" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/java/servlet/ServletLogin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="27" lean-forward="false" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/webapp/view/home.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="6" lean-forward="false" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/webapp/view/showMember.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/java/dao/CateDao.java" />
+    <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/java/dao/BookDao.java" />
     <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/test/Test1.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
-          <caret line="5" column="33" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1565008919147" expanded="true" signature="949:965" ph="SELECT * FRO... Me" />
-          </folding>
+          <caret line="5" column="33" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/java/bean/Cate.java">
+    <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/java/bean/Cate.java" />
+    <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/java/bean/Book.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/sql/DriverManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="450">
+          <caret line="313" column="36" lean-forward="false" selection-start-line="313" selection-start-column="36" selection-end-line="313" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../javaWebProject3/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1518">
-          <caret line="87" column="30" lean-forward="true" selection-start-line="87" selection-start-column="30" selection-end-line="87" selection-end-column="30" />
+        <state relative-caret-position="1012">
+          <caret line="44" column="29" lean-forward="false" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/java/bean/Book.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/commons-dbutils/commons-dbutils/1.6/commons-dbutils-1.6.jar!/org/apache/commons/dbutils/QueryRunner.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="12" lean-forward="false" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+        <state relative-caret-position="146">
+          <caret line="150" column="0" lean-forward="false" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/java/dao/Dao.java">
+    <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/java/filter/FilterCharsetEncoding.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="21" column="20" lean-forward="true" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-          <folding />
+        <state relative-caret-position="391">
+          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/java/dao/daoImpl/MemberDao.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/commons-dbutils/commons-dbutils/1.6/commons-dbutils-1.6.jar!/org/apache/commons/dbutils/AbstractQueryRunner.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="41" column="22" lean-forward="false" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="1125">
+          <caret line="133" column="41" lean-forward="true" selection-start-line="133" selection-start-column="41" selection-end-line="133" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/resources/c3p0-config.xml">
+    <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/webapp/view/home.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="17" column="54" lean-forward="true" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
+        <state relative-caret-position="414">
+          <caret line="18" column="8" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/test/Test2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="82" column="12" lean-forward="true" selection-start-line="82" selection-start-column="12" selection-end-line="82" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/java/util/QueryRunnerUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-39">
-          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#459#460#0" expanded="true" />
-            <element signature="e#501#502#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="158">
+          <caret line="43" column="38" lean-forward="true" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/webapp/view/alterMember.xhtml" />
+    <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/resources/c3p0-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" column="92" lean-forward="true" selection-start-line="14" selection-start-column="70" selection-end-line="14" selection-end-column="92" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/webapp/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1806">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/com/sun/jmx/interceptor/DefaultMBeanServerInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6186">
+          <caret line="773" column="0" lean-forward="true" selection-start-line="773" selection-start-column="0" selection-end-line="773" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/java/servlet/delMemberHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-126">
+          <caret line="28" column="42" lean-forward="true" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/java/util/JdbcUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="28" column="36" lean-forward="false" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+        <state relative-caret-position="299">
+          <caret line="19" column="24" lean-forward="true" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/java/servlet/ServletLogin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="31" column="18" lean-forward="false" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="6" lean-forward="false" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/java/servlet/addMemberHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="805">
+          <caret line="45" column="31" lean-forward="false" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/java/dao/Dao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/java/bean/Member.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="39" column="40" lean-forward="true" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="40" />
+        <state relative-caret-position="1035">
+          <caret line="61" column="9" lean-forward="false" selection-start-line="61" selection-start-column="9" selection-end-line="61" selection-end-column="9" />
           <folding>
-            <element signature="e#359#360#0" expanded="true" />
-            <element signature="e#390#391#0" expanded="true" />
-            <element signature="e#438#439#0" expanded="true" />
-            <element signature="e#478#479#0" expanded="true" />
-            <element signature="e#509#510#0" expanded="true" />
-            <element signature="e#536#537#0" expanded="true" />
-            <element signature="e#576#577#0" expanded="true" />
-            <element signature="e#608#609#0" expanded="true" />
-            <element signature="e#745#746#0" expanded="true" />
-            <element signature="e#840#841#0" expanded="true" />
-            <element signature="e#870#871#0" expanded="true" />
-            <element signature="e#969#970#0" expanded="true" />
-            <element signature="e#1001#1002#0" expanded="true" />
-            <element signature="e#1120#1121#0" expanded="true" />
-            <element signature="e#1162#1163#0" expanded="true" />
-            <element signature="e#1273#1274#0" expanded="true" />
-            <element signature="e#1311#1312#0" expanded="true" />
-            <element signature="e#1426#1427#0" expanded="true" />
-            <element signature="e#1466#1467#0" expanded="true" />
-            <element signature="e#1557#1558#0" expanded="true" />
-            <element signature="e#1585#1586#0" expanded="true" />
+            <element signature="e#388#389#0" expanded="false" />
+            <element signature="e#419#420#0" expanded="false" />
+            <element signature="e#467#468#0" expanded="false" />
+            <element signature="e#507#508#0" expanded="false" />
+            <element signature="e#542#543#0" expanded="false" />
+            <element signature="e#573#574#0" expanded="false" />
+            <element signature="e#621#622#0" expanded="false" />
+            <element signature="e#661#662#0" expanded="false" />
+            <element signature="e#692#693#0" expanded="false" />
+            <element signature="e#719#720#0" expanded="false" />
+            <element signature="e#759#760#0" expanded="false" />
+            <element signature="e#791#792#0" expanded="false" />
+            <element signature="e#894#895#0" expanded="false" />
+            <element signature="e#928#929#0" expanded="false" />
+            <element signature="e#1023#1024#0" expanded="false" />
+            <element signature="e#1053#1054#0" expanded="false" />
+            <element signature="e#1303#1304#0" expanded="false" />
+            <element signature="e#1345#1346#0" expanded="false" />
+            <element signature="e#1456#1457#0" expanded="false" />
+            <element signature="e#1494#1495#0" expanded="false" />
+            <element signature="e#1609#1610#0" expanded="false" />
+            <element signature="e#1649#1650#0" expanded="false" />
+            <element signature="e#1740#1741#0" expanded="false" />
+            <element signature="e#1768#1769#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/test/Test2.java">
+    <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/java/servlet/alterHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="50" column="45" lean-forward="false" selection-start-line="50" selection-start-column="45" selection-end-line="50" selection-end-column="45" />
+        <state relative-caret-position="1472">
+          <caret line="74" column="21" lean-forward="false" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="21" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/java/dao/daoImpl/MemberDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="943">
+          <caret line="50" column="33" lean-forward="false" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/webapp/view/addMember.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="15" lean-forward="false" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/java/servlet/ShowServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1012">
+          <caret line="59" column="48" lean-forward="false" selection-start-line="59" selection-start-column="48" selection-end-line="59" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/webapp/view/alterMember.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4761">
+          <caret line="207" column="15" lean-forward="false" selection-start-line="207" selection-start-column="15" selection-end-line="207" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/webapp/view/showMember.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="93" column="19" lean-forward="true" selection-start-line="93" selection-start-column="19" selection-end-line="93" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../javaWebProject3/src/main/webapp/view/detail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="54" column="19" lean-forward="true" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>

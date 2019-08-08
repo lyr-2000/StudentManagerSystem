@@ -15,3 +15,7 @@
 
 </body>
 </html>
+
+<script>
+    window.location.href="/showMember.jsp";
+</script>

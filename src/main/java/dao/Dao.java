@@ -1,5 +1,10 @@
 package dao;
 
+import bean.Member;
+
+import java.sql.SQLException;
+import java.util.List;
+
 /**
  * Created by ASUS on 2019/8/5.
  */
@@ -7,7 +12,7 @@ public interface Dao {
     /*
     * 增
     * */
-    void add(Object o);
+    boolean add(Object o) throws SQLException;
 
     /*
     *
@@ -19,8 +24,9 @@ public interface Dao {
     * 查询
     * */
     void Query(Object o);
-    void QueryAll();
-
+    List QueryAll();
+    boolean QueryById(String id);//通过学号查询数据
+    Object QueryById2(String id);//返回对于的bean对象
 
     /*
     *

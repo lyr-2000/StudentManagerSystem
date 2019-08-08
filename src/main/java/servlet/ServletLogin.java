@@ -11,6 +11,8 @@ import java.io.IOException;
 
 /**
  * Created by ASUS on 2019/8/5.
+ *
+ * 处理登录事务
  */
 @WebServlet(name = "ServletLogin",urlPatterns = "/login.do")
 public class ServletLogin extends HttpServlet {

@@ -10,7 +10,7 @@ import java.io.IOException;
 /**
  * Created by ASUS on 2019/8/5.
  */
-@WebFilter(filterName = "FilterCharsetEncoding")
+@WebFilter(filterName = "FilterCharsetEncoding",urlPatterns = "/*")
 public class FilterCharsetEncoding implements Filter {
     private FilterConfig filterConfig = null;
     private String defaultCharest = "utf-8";
@@ -23,19 +23,16 @@ public class FilterCharsetEncoding implements Filter {
         HttpServletResponse hresp =(HttpServletResponse)resp;
         HttpServletRequest hreq = (HttpServletRequest)req;
         //获取xml中配置的字符集
-        String charset = filterConfig.getInitParameter("charset");
-        if(charset==null)
-        {
-            charset= defaultCharest;
-        }
-        hreq.setCharacterEncoding(charset);
-        hresp.setCharacterEncoding(charset);
+
+
+        hreq.setCharacterEncoding("utf-8");
+        hresp.setCharacterEncoding("utf-8");
         chain.doFilter(hreq,hresp);
 
 
 
 
-        chain.doFilter(req, resp);
+
     }
 
     public void init(FilterConfig config) throws ServletException {

@@ -4,6 +4,7 @@
 
 import bean.Member;
 import com.mchange.v2.c3p0.ComboPooledDataSource;
+import jdk.nashorn.internal.scripts.JD;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
@@ -44,7 +45,7 @@ public class Test2 {
         try{
             QueryRunner qr = QueryRunnerUtil.getQrConn();
             String sql = "select * from member";
-            List<Member> list = qr.query(JdbcUtil.getConnection(),sql,new BeanListHandler<Member>(Member.class));
+            List<Member> list = qr.query(QueryRunnerUtil.getConnection(),sql,new BeanListHandler<Member>(Member.class));
             for(Member i:list) {
 
                 System.out.println(i.getName());
@@ -57,4 +58,38 @@ public class Test2 {
             e.printStackTrace();
         }
     }
+
+
+
+    /*
+    *
+    *
+    * 用来尝试对表进行插入操作
+    * 经过试验，是成功的
+    *
+    * */
+    @Test
+    public void add() throws SQLException {
+        String sql = "insert into test (name,password)value(?,?)";
+        QueryRunner qr = QueryRunnerUtil.getQrConn();
+        String [] params = {
+                "444",
+                "扫]]]地"
+        };
+        /*
+        *
+        * 总结：一定要在配置文件指定 为utf-8编码，不然中文乱码
+        *
+        * */
+
+        JdbcUtil.add(sql, params);
+
+
+
+    }
+
+
+
+
+
 }

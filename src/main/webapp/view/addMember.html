@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加成员</title>
+
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <style>
+        #signature{
+            width:1000px;
+            height:700px;
+        }
+        form{
+            width:1200px;
+            margin:auto;
+            display:block;
+        }
+        button{
+            background-color:blue;
+            color: white;
+            border:1px solid blue;
+            position: absolute;
+            top:79px;
+            right: 84px;
+        }
+    </style>
+
+</head>
+<body>
+
+<form action="/add.do" id="msg" method="post">
+    id: <input type="text" placeholder="输入学生的学号"  required  id="num"        name="id">               <br><br>
+    password: <input type="text" placeholder="请输入注册的密码"  required  name="password">         <br>  <br>
+    名字： <input type="text"                                      id="name"  name="name">
+    性别:
+    <select  id="sex"                                            name="sex">              <br><br><br>
+        <option value="0">女</option>
+        <option value="1">男</option>
+    </select>
+
+
+    加入时间: <input type="date"      required                            name="joinTime">         <br><br><br>
+    加入组织：
+    <select name="work" id="">                                                           <br><br><br>
+        <option value="0">算法组</option>
+        <option value="1">前端组</option>
+        <option value="2">后端组</option>
+        <option value="4">爬虫组</option>
+        <option value="3">项目经理组</option>
+
+    </select>
+    生日：<input type="date"                                               name="birthday">  <br><br><br>
+    院系：<input type="text"         required                                       name="subject"><br><br><br>
+    电话号码： <input type="text"     required      id="phone"                               name="phone"><br><br><br>
+
+    <br><br><br>
+    他的个性签名： <br>
+    <textarea  id="signature"                    name="signature">
+
+
+    </textarea>
+
+
+
+
+
+
+</form>
+<button id="submit">
+    一键提交
+</button>
+
+
+</body>
+
+
+<script>
+
+    $(document).ready(
+
+        function(){
+            $("#submit").click(
+                function () {
+                    if(checknum())
+                    {
+                        alert("不准提交");
+                        return;
+                    }
+                    if(handler())
+                    {
+                        alert("电话号码不合规矩");
+                        return;
+                    }
+
+
+
+                    $.ajax({
+
+                        type:"post",
+                        url:"/add.do",
+                        data:$("#msg").serialize(),
+                        dataType:"json",
+                        success:function (ans) {
+                            ans = ans.addAns;
+                            addInfo = ans.infos;
+                            errs = ans.errNum;
+                            if(errs) {
+                                alert("信息缺少了");
+                            }
+                            if(ans) {
+                                alert("提交成功");
+                            }else
+                            {
+                                if(addInfo==null) {
+                                    alert("数据库已经有这个人了");
+                                }else{
+                                    alert("提交失败，数据库好像出异常了，请检查id是否有非法字符");
+                                }
+                            }
+
+
+                        }
+
+
+                    })
+                }
+            )
+
+
+
+        }
+
+
+
+    );
+
+
+
+</script>
+
+<script>
+
+    function checknum(){
+        var obj = $("#num");
+
+
+        if(!/^[0-9]*$/.test(obj.val()))
+        {
+            alert("id的话 请输入数字! ");
+            alert("别指望修改脚步，后台也不能过");
+            return true;
+        }
+        return false;
+    }
+
+    function handler() {
+        b = $("#userId").val()==""||$("#password").val()==""||$("name").val()==""||$("#joinTime").val()==""||$('#phone').val()=="";
+        if(b) {
+            alert("基础信息没填完，不让过");
+            return false;
+        }
+        b = checkPhone();
+        return b;
+    }
+
+    function checkPhone(){
+        var phone = document.getElementById('phone').value;
+        if(!(/^1[34578]\d{9}$/.test(phone))){
+            alert("手机号码有误，请重填");
+        return true;
+        }
+            return false;
+    }
+
+
+</script>
+
+
+</html>
+

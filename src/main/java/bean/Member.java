@@ -15,6 +15,15 @@ public class Member {
     private String subject;
     private String phone;
     private String signature;
+    private String password;
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
     public String getBirthday() {
         return birthday;
@@ -93,5 +102,13 @@ public class Member {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Member{" +
+                "name='" + name + '\'' +
+                '}';
     }
 }
