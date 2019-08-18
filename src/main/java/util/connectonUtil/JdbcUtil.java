@@ -1,23 +1,29 @@
-package util;
+package util.connectonUtil;
 
 /**
  * Created by ASUS on 2019/8/5.
+ *
+ * 实现分页等查询功能
+ *
+ *
+ *
  */
 
-import com.mchange.v2.c3p0.ComboPooledDataSource;
+import bean.Member;
+import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.handlers.BeanListHandler;
 
-import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
+import java.util.List;
 
 
 /**
  *
  * @deprecated
- * 这个类没有用了，使用QueryRunner 和C3p0 更加方便
+ * 这个类部分功能不用了，使用QueryRunner 和C3p0 方便
  * */
 public class JdbcUtil {
     // private static DataSource dataSource=null;
@@ -56,6 +62,7 @@ public class JdbcUtil {
 
     /**
      *
+     * 释放内存资源，关闭数据库connection
      * @deprecated
      *
     * */
@@ -85,7 +92,7 @@ public class JdbcUtil {
     }
     /**
      *
-     *
+     *关闭数据库 connection
      *
      * @deprecated
      *
@@ -106,4 +113,80 @@ public class JdbcUtil {
             }
         }
     }
+    /**
+     *
+     *
+     * 返回数据库 表中的总记录数（总人数）
+     *
+     * @deprecated 没有实现条件查询功能
+     *
+     * @see  util.serviceUtil.QueryForPage 有相应的方法，实现条件查询
+     *
+     * */
+    public static int count() {
+
+        String sql = "select count(*) from member";
+        Connection conn = QueryRunnerUtil.getConnection();
+        PreparedStatement psmt = null;
+        ResultSet rs = null;
+
+        try {
+            int count = 0;
+            psmt = conn.prepareStatement(sql);
+
+            rs = psmt.executeQuery();
+            if(rs.next()) {
+                count = rs.getInt(1);
+                System.out.println("总人数");
+
+            }
+
+
+            return count;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            release(rs,psmt,conn);
+
+        }
+
+        return 0;
+
+
+    }
+
+    /**
+     *
+     * 实现分页查询功能
+     *
+     * 每次只是取出固定人数，分页查询
+     *
+     * @return start  从哪页开始
+     *
+     * @return rows 行数
+     *
+     * */
+    public static List<Member> findByPage(int start,int rows/* 每页 rows 个 */) {
+        List<Member> list = null;
+        String sql = "select * from member limit ?,?";
+        try{
+
+            QueryRunner qr = QueryRunnerUtil.getQrConn();
+            list = qr.query(sql,new BeanListHandler<Member>(Member.class),start,rows);
+            System.out.println("分页查询底层操作成功");
+            for(Member i: list) {
+                System.out.println(i);
+            }
+
+            return list;
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
+
 }

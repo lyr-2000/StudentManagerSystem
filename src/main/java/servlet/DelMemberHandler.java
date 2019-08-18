@@ -4,7 +4,6 @@ import bean.Member;
 import dao.Dao;
 import dao.daoImpl.MemberDao;
 import org.json.JSONObject;
-import util.QueryRunnerUtil;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,12 +15,12 @@ import java.io.IOException;
 /**
  * Created by ASUS on 2019/8/6.
  *
- * 用来处理删除成员的事务
+ * 用来处理删除成员的事务（删除单个）
  *
  *
  */
 @WebServlet(name = "Servlet",urlPatterns = "/del.do")
-public class delMemberHandler extends HttpServlet {
+public class DelMemberHandler extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         String id= request.getParameter("id");

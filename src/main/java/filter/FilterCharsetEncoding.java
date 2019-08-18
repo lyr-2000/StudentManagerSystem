@@ -9,17 +9,20 @@ import java.io.IOException;
 
 /**
  * Created by ASUS on 2019/8/5.
+ * 设置字符集编码 统一为 utf-8
+ *
  */
 @WebFilter(filterName = "FilterCharsetEncoding",urlPatterns = "/*")
 public class FilterCharsetEncoding implements Filter {
-    private FilterConfig filterConfig = null;
-    private String defaultCharest = "utf-8";
+    // private FilterConfig filterConfig = null;
+    // private String defaultCharest = "utf-8";
 
 
     public void destroy() {
     }
 
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
+        System.out.println("filter1  -----");
         HttpServletResponse hresp =(HttpServletResponse)resp;
         HttpServletRequest hreq = (HttpServletRequest)req;
         //获取xml中配置的字符集
@@ -36,7 +39,7 @@ public class FilterCharsetEncoding implements Filter {
     }
 
     public void init(FilterConfig config) throws ServletException {
-        this.filterConfig = config;
+        // this.filterConfig = config;
     }
 
 }

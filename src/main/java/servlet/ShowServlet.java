@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * Created by ASUS on 2019/8/6.
  *
- * 用于展示成员的数据
+ * 用于展示成员的数据,大厅
  *
  */
 @WebServlet(name = "show",urlPatterns = {"/show.do"})
@@ -29,6 +29,7 @@ public class ShowServlet extends HttpServlet {
         System.err.println("成功触发");
 
         String type = request.getParameter("type");
+        //
         if("show".equals(type)) {
             try{
                 showStudent(request,response);
@@ -62,6 +63,10 @@ public class ShowServlet extends HttpServlet {
         List<Member> list = memberDao.QueryAll();
         request.setAttribute("list",list);
         request.setAttribute("a",1);
+
+        for(Member i: list) {
+            System.out.println(i);
+        }
 
 
 

@@ -93,5 +93,15 @@ public class Test1 {
     }
 
 
+    @Test
+    public void find() {
+        String str = "http://localhost:8080/findByPage.do?currentPage=1&rows=5&search=search&uName=&uId=";
+        System.out.println(str.indexOf("findByPage.do?"));
+        System.out.println(str.length());
+        String s = "1234";
+        System.out.println(s.indexOf("0"));
+    }
+
+
 
 }

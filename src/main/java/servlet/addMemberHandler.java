@@ -19,10 +19,8 @@ import java.io.IOException;
  *
  */
 @WebServlet(name = "addMemberHandler",urlPatterns = "/add.do")
-public class addMemberHandler extends HttpServlet {
+public class AddMemberHandler extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-     request.setCharacterEncoding("utf-8");
-     response.setCharacterEncoding("utf-8");
 
       String id= request.getParameter("id");
       String name = request.getParameter("name");
@@ -34,6 +32,7 @@ public class addMemberHandler extends HttpServlet {
       String subject= request.getParameter("subject");
       String phone= request.getParameter("phone");
       String signature= request.getParameter("signature");
+      //过滤用户信息，用户可能修改前台js脚本提交，后台再过滤一遍
       if(filter(id,name,password,phone)==false) {
 
           JSONObject jsonObject = new JSONObject("{addAns:false,errNum:true}");
@@ -60,10 +59,14 @@ public class addMemberHandler extends HttpServlet {
       member.setSignature(signature);
       member.setPassword(password);
       System.out.println("报告，我已经收到消息了");
+
+
+
+
       /*
       * 获得 dao对象
       * */
-      Dao dao = MemberDao.getInstance();
+        Dao dao = MemberDao.getInstance();
         JSONObject jsonObject = null;
       try{
         boolean b = dao.add(member);
@@ -102,15 +105,18 @@ public class addMemberHandler extends HttpServlet {
      *
      * @param  arr 不定长参数
      *
-     *@return boolean
+     * @return boolean
     *
     * */
     public static boolean filter(String ... arr) {
         for(String i:arr) {
-            if(i.equals("")||i.equals("null")||i==null) {
+            if(i==null||i.equals("")||i.equals("null")) {
                 return false;
             }
         }
         return true;
     }
+
+
+
 }

@@ -1,4 +1,4 @@
-package util;
+package util.connectonUtil;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 import org.apache.commons.dbutils.QueryRunner;

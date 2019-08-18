@@ -14,9 +14,12 @@ import java.io.IOException;
 
 /**
  * Created by ASUS on 2019/8/7.
+ *
+ * 管理员 修改用户信息 业务
+ *
  */
 @WebServlet(name = "Servlet2",urlPatterns = "/alter.do")
-public class alterHandler extends HttpServlet {
+public class AlterHandler extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String i = request.getParameter("flag");
         if(i.equals("0")) {

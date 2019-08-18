@@ -16,6 +16,31 @@ public class Member {
     private String phone;
     private String signature;
     private String password;
+    private String admin;
+
+    // /**
+    //  *
+    //  * 用户是否为管理员
+    //  * */
+    // private boolean isAdmin;
+
+    public Member() {
+
+    }
+
+    {
+        /*
+        *
+        * 用户默认不是管理员，如果数据库 访问到是 ，再 设置
+        *
+        * */
+        // this.isAdmin = false;
+        this.admin = "普通成员";
+
+    }
+
+
+
 
     public String getPassword() {
         return password;
@@ -104,6 +129,58 @@ public class Member {
         this.id = id;
     }
 
+    //
+    // public boolean isAdmin() {
+    //     return isAdmin;
+    // }
+
+
+    // /**
+    //  *
+    //  * 设置用户是否为管理员 的身份
+    //  * */
+    // public void setIsAdmin(boolean admin) {
+    //     isAdmin = admin;
+    // }
+
+
+
+
+
+    /**
+     *
+     * 用户 的管理员字段
+     *
+     *
+     * */
+
+    public String getAdmin() {
+        return admin;
+    }
+
+    public void setAdmin(String admin) {
+        this.admin = admin;
+    }
+
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Member member = (Member) o;
+
+        if (id != null ? !id.equals(member.id) : member.id != null) return false;
+        return name != null ? name.equals(member.name) : member.name == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id != null ? id.hashCode() : 0;
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        return result;
+    }
 
     @Override
     public String toString() {
@@ -111,4 +188,6 @@ public class Member {
                 "name='" + name + '\'' +
                 '}';
     }
+
+
 }

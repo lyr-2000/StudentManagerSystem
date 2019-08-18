@@ -1,12 +1,18 @@
 package dao.daoImpl;
 
 import bean.Member;
+import bean.PageForMember;
 import dao.Dao;
+import dao.QueryForPageDao;
+import dao.DeleteDao;
+import dao.LoginPlugin;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
-import util.QueryRunnerUtil;
+import util.connectonUtil.JdbcUtil;
+import util.connectonUtil.QueryRunnerUtil;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -20,7 +26,7 @@ import java.util.List;
  * @return
  *
  * */
-public class MemberDao implements Dao {
+public class MemberDao implements Dao , DeleteDao, QueryForPageDao, LoginPlugin {
 
     private static MemberDao dao = null;
     static {
@@ -185,7 +191,7 @@ public class MemberDao implements Dao {
         QueryRunner qr = QueryRunnerUtil.getQrConn();
 
         try {
-            List<Member> list  = qr.query(QueryRunnerUtil.getConnection(),ans, new BeanListHandler<Member>(Member.class));
+            List<Member> list  = qr.query(ans, new BeanListHandler<Member>(Member.class));
             /*
             * 获得Member集合，然后取出第一个对象（数据库没问题就是唯一的对象）并且返回去
             *
@@ -216,7 +222,13 @@ public class MemberDao implements Dao {
     }
 
 
-
+    /**
+     *
+     * 解决添加成员的业务逻辑
+     *
+     * @param m
+     *
+    * */
     private boolean update(Member m) {
         String sql1 =
                 "update member set `name`=?,sex=?,joinTime=?,work=?,birthday=?,subject=?,phone=?,signature=?,`password`=?";
@@ -240,7 +252,7 @@ public class MemberDao implements Dao {
         System.out.println(sql+"--------------");
         QueryRunner qr = QueryRunnerUtil.getQrConn();
         try {
-            qr.update(QueryRunnerUtil.getConnection(),sql,param);
+            qr.update(sql,param);
             return true;
         } catch (SQLException e) {
             e.printStackTrace();
@@ -249,5 +261,129 @@ public class MemberDao implements Dao {
         }
 
         return false;
+    }
+
+    /**
+     *
+     *
+     * 重写 deleteDao接口，解决批量删除的业务逻辑
+     * @param arr  这是一个存放 用户 id 的数据，通过id 访问数据，并且删除 数据
+     *
+     * */
+    @Override
+    public void deleteSelected(String[] arr) {
+
+
+        for(String id: arr){
+
+            Member m = new Member();
+            m.setId(id);
+            dao.del(m);
+        }
+    }
+
+
+
+    /**
+     *
+     * 分页查询并返回 对于的 集合 的 实现方法
+     *
+     * @param currentPage
+     * @param rows
+     *
+     *
+     *
+     * */
+
+    @Override
+    public PageForMember QueryForPage(String currentPage, String  rows) {
+         PageForMember pb = new PageForMember();
+         int currentPage1 = Integer.parseInt(currentPage);
+         int rows1 = Integer.parseInt(rows);
+
+         //设置当前所在页数
+         int start = (currentPage1-1)*rows1;
+
+
+         List<Member> list = JdbcUtil.findByPage(start,rows1);
+
+         //获得 对象集合 并且封装成 PageForMember 对象的变量
+         pb.setList(list);
+         //————————————————————————————
+         for(Member i: list) {
+             System.out.println(i);
+         }
+         //------- ------- -------- --------- ------- ------- --------
+
+        //设置总的数据量信息
+        pb.setTotalCount(this.getTotalCount());
+
+         /*
+         *
+         * 计算总的页数
+         *
+         * */
+         int totalPage = pb.getTotalCount()%rows1==0 ? pb.getTotalCount()/rows1: pb.getTotalCount()/rows1+1;
+         pb.setTotalPage(totalPage);
+
+
+
+         return pb;
+
+
+
+
+
+
+
+    }
+
+    /**
+     *
+     * 查询数据库中的记录总数
+     *
+     *
+     * */
+    public int  getTotalCount() {
+
+
+        /*
+        * 查询数据库中的 记录数量
+        * */
+        int count = JdbcUtil.count();
+
+        return count;
+    }
+
+    /**
+     * 登录页面的时候调用 该方法，查询用户是否存在
+     *
+     * @param id       用户学号
+     * @param password 用户密码
+     * @param admin    是否查询用户的身份，用户有分 管理员 和普通成员两种
+     */
+    @Override
+    public List QueryById(String id, String password, boolean admin) {
+
+
+        String sql = "select * from member where `id`=? and `password`=?";
+        QueryRunner qr = QueryRunnerUtil.getQrConn();
+
+        Object[] param = {id,password};
+        try {
+            List<Member> m = qr.query(sql,new BeanListHandler<Member>(Member.class),param);
+            if(admin) {
+                System.out.println(m);
+            }
+            return m;
+        } catch (SQLException e) {
+            System.err.println("注册验证的时候查询 数据库 出现问题");
+            e.printStackTrace();
+        }
+
+
+        List p = new ArrayList<>();
+        p.add(new Member());
+        return p;
     }
 }

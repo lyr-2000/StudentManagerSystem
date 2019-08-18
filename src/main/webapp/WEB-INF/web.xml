@@ -6,7 +6,35 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
                       http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
          version="3.0">
+    <!--设置编码 的过滤器-->
+    <filter>
+        <filter-name>FilterCharsetEncoding</filter-name>
+        <filter-class>filter.FilterCharsetEncoding</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>FilterCharsetEncoding</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
 
+    <!--处理 登录的过滤器-->
 
+    <filter>
+        <filter-name>FilterForLogin</filter-name>
+        <filter-class>filter.FilterForLogin</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>FilterForLogin</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!--处理 成员操作的过滤器-->
+    <filter>
+        <filter-name>FilterForDb</filter-name>
+        <filter-class>filter.FilterForDataBase</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>FilterForDb</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
 
 </web-app>
