@@ -4,7 +4,19 @@
     <meta charset="UTF-8">
     <title>添加成员</title>
 
-    <script src="../js/jquery-1.12.4.min.js"></script>
+    <!--<script src="../js/jquery-1.12.4.min.js"></script>-->
+
+
+    <!-- 1. 导入CSS的全局样式 -->
+    <!-- 1. 导入CSS的全局样式 -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/js/jquery-2.1.0.min.js"></script>
+    <!-- 2. jQuery导入，建议使用1.9以上的版本 -->
+
+    <!-- 3. 导入bootstrap的js文件 -->
+    <script src="/js/bootstrap.min.js"></script>
+
+
     <style>
         #signature{
             width:1000px;
@@ -23,12 +35,31 @@
             top:79px;
             right: 84px;
         }
+
+        .form{
+            position: relative;
+        }
+        hgroup#banner{
+
+            background:yellow;
+            height:36px;
+            width: 337px;
+            overflow:hidden;
+            position: fixed;
+            top: 10px;
+            right: 10px;
+        }
+        #code{
+            width: 100px;
+            display:inline-block;
+        }
     </style>
 
 </head>
 <body>
+<br><br><br>
 
-<form action="/add.do" id="msg" method="post">
+<form action="/add.do" id="msg" method="post" class="form">
     id: <input type="text" placeholder="输入学生的学号"  required  id="num"        name="id">               <br><br>
     password: <input type="text" placeholder="请输入注册的密码"  required  name="password">         <br>  <br>
     名字： <input type="text"                                      id="name"  name="name">
@@ -52,6 +83,11 @@
     生日：<input type="date"                                               name="birthday">  <br><br><br>
     院系：<input type="text"         required                                       name="subject"><br><br><br>
     电话号码： <input type="text"     required      id="phone"                               name="phone"><br><br><br>
+    管理员权限：
+    <select name="admin" id="admin">
+        <option value="0" selected>普通成员</option>
+        <option value="1">管理员</option>
+    </select>
 
     <br><br><br>
     他的个性签名： <br>
@@ -62,13 +98,22 @@
 
 
 
+    <hgroup id="banner">
+        <label for="code">验证码：</label>
+        <input type="text" id="code" name="code"   class="form-control code">
+            <img src="/checkCodeServlet" title="看不清点击刷新" id="vcode"  onclick="refreshCode()" />
 
+
+        <br>
+    </hgroup>
 
 
 </form>
 <button id="submit">
     一键提交
 </button>
+
+<br><br><br><br><br><br><br><br><br><br>
 
 
 </body>
@@ -86,21 +131,86 @@
                         alert("不准提交");
                         return;
                     }
-                    if(handler())
+                    if(!handler())
                     {
-                        alert("电话号码不合规矩");
+//                        alert("电话号码不合规矩");
                         return;
                     }
+                    var theCode = $("#code").val();
+                    console.log(theCode);
+                    if(theCode.length!=4) {
+                        alert("请填写验证码 ");
+                        refreshCode();
+                        return;
+                    }
+
+
+                    var isRegister = location.href.indexOf("type=register");
+//                    alert(isRegister>0);
+                    var strUrl = isRegister>0 ? "/register.do":"/add.do";
+
+
+                    $.ajaxSetup({
+
+
+
+                        statusCode: {
+                            403:function () {
+                                alert("您不是管理员，拒绝服务");
+                            },
+
+                            404: function() {
+                                alert('您不是管理员，拒绝服务');
+                            },
+                            504: function() {
+                                alert('数据获取/输入失败，服务器没有响应。504');
+                            },
+                            500: function() {
+                                alert('服务器有误。500');
+                            }
+                        }
+                    });
+
+
 
 
 
                     $.ajax({
 
                         type:"post",
-                        url:"/add.do",
+                        url:strUrl,
                         data:$("#msg").serialize(),
                         dataType:"json",
                         success:function (ans) {
+                            //如果是用户注册的话，另外写一个分支 处理
+                            if(isRegister>0) {
+
+                                var code = ans.code;
+                                if(code!=null&&code==false) {
+                                    alert("验证码错误");
+                                    return
+                                }
+
+
+                                var register = ans.register;
+                                if(!register) {
+                                    alert("注册失败，您已经提交了申请，或者您已经是部落的一员了");
+                                }else{
+                                    alert("提交成功，将由管理员审核您的信息");
+                                    window.location.href="/login.jsp";
+                                }
+                                window.location.href="/login.jsp";
+
+
+                                return;
+                            }
+
+
+
+                            //下面是管理员进行增加数据的操作，与注册无关
+
+
+
                             ans = ans.addAns;
                             addInfo = ans.infos;
                             errs = ans.errNum;
@@ -154,7 +264,7 @@
     }
 
     function handler() {
-        b = $("#userId").val()==""||$("#password").val()==""||$("name").val()==""||$("#joinTime").val()==""||$('#phone').val()=="";
+       var b = $("#userId").val()==""||$("#password").val()==""||$("name").val()==""||$("#joinTime").val()==""||$('#phone').val()=="";
         if(b) {
             alert("基础信息没填完，不让过");
             return false;
@@ -167,10 +277,29 @@
         var phone = document.getElementById('phone').value;
         if(!(/^1[34578]\d{9}$/.test(phone))){
             alert("手机号码有误，请重填");
-            return true;
-        }
             return false;
+        }
+            return true;
     }
+
+
+</script>
+
+
+<script>
+    function refreshCode(){
+        //1.获取验证码图片对象
+        var vcode = document.getElementById("vcode");
+
+        //2.设置其src属性，加时间戳
+        vcode.src = "/checkCodeServlet?time="+new Date().getTime();
+    }
+
+    $(document).ready(function () {
+        setTimeout(refreshCode,1000);
+    })
+
+
 
 
 </script>

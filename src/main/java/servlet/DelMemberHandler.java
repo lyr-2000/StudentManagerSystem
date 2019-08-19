@@ -25,14 +25,27 @@ public class DelMemberHandler extends HttpServlet {
 
         String id= request.getParameter("id");
         System.out.println(id);
-        Dao dao = MemberDao.getInstance();
+        MemberDao dao = MemberDao.getInstance();
 
-        Member m = new Member();
-        m.setId(id);
+
         JSONObject jsonObject = null;
+
+
+        String tableName = request.getParameter("tableName");
+
+
+        //是否有指定 table 数据库表的名字，如果有，在下面判断，并调用对应的方法
+        boolean b = tableName!=null&&tableName.equals("loginmember");
         try
         {
-            dao.del(m);
+            //如果是管理员审核 注册申请，就调用 deleteChoose方法，否则就是删除 member表里的方法，调用del 方法
+            if(b) {
+                dao.deleteChoose(new String[]{id},tableName);
+            }else{
+                Member m = new Member();
+                m.setId(id);
+                dao.del(m);
+            }
             jsonObject = new JSONObject("{delAns:true}");
         }catch (Exception e) {
             e.printStackTrace();

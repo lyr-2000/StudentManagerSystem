@@ -113,7 +113,7 @@
     <br>
     <br>
     <br><br><br><br>
-    <a href="#">注册</a>
+    <a href="/view/addMember.html?type=register">注册</a>
 </body>
 </html>
 

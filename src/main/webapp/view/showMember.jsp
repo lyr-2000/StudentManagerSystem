@@ -16,7 +16,7 @@
 
 <html>
 <head>
-    <title>Title</title>
+    <title>大厅</title>
     <script src="../js/jquery-1.12.4.min.js"></script>
     <style>
         td{
@@ -65,6 +65,25 @@
             overflow:hidden !important;
             height: 18px;
 
+        }
+        #get{
+            margin-left: 18px;
+        }
+        hgroup{
+            padding:65px;
+        }
+
+        .relative{
+            position: relative;
+
+        }
+        .footer{
+            text-align: center;
+            position: absolute;
+
+            bottom: -40px;
+            left: 0;
+            right: 0
         }
     </style>
 
@@ -158,12 +177,12 @@
 
 
     <div style="float:right;margin-right:80px">
-        <a href="javascript:void(0);" class="btn btn-primary">添加成员</a>
-        <a href="javascript:void(0);" class="btn btn-primary" id="del"  onclick="confirm_()">删除选中</a>
+        <a  href="/view/addMember.html" class="btn btn-primary">添加成员</a>
+        <a href="javascript:void(0);" class="btn btn-danger" id="del"  onclick="confirm_()">删除选中</a>
     </div>
 
     <br><br>
-    <form action="" id="form"  action="delSelected.do"  method="post"   >
+    <form action="" id="form"  action="/dels.do"  method="post"   class="relative" >
         <table  border="1" class="table table-bordered table-hover">
             <tr id="col-title" class="success">
                 <th><input type="checkbox"    id="boxt"  onclick="show1()"></th>
@@ -193,12 +212,13 @@
                     <td>${i.getJoinTime()}</td>
                     <td>${i.getPhone()}</td>
                     <td><a href="/show.do?type=detail&id=${i.getId()}" class="btn btn-default btn-sm">查看详情</a></td>
-                    <td><a href="/alter.do?id=${i.getId()}&flag=0" class="btn btn-default btn-sm">修改</a></td>
+
+                    <td><a href="javascript:void(0)" class="btn btn-block btn-sm" onclick="sendUrl('/alter.do?id=${i.getId()}&flag=0')" >修改</a></td>
                     <td>
-                        <a href="/view/addMember.html" class="btn btn-default btn-sm">增加</a>
+                        <a href="javascript:void(0)" class="btn btn-warning" onclick="sendUrl('/view/addMember.html')" >增加</a>
                     </td>
                     <td class="last">
-                        <a href="javascript:void(0)" onclick="del(${i.getId()},this)" class="btn btn-default btn-sm">删除</a>
+                        <a href="javascript:void(0)" onclick="del(${i.getId()},this)" class="btn btn-danger">删除</a>
 
                     </td>
 
@@ -206,6 +226,10 @@
 
                 </tr>
             </c:forEach>
+            <div class="footer">
+                <strong>${list.size()} ${list==null? "":"条记录"}</strong>
+            </div>
+
 
 
             <%--分页查询--%>
@@ -219,12 +243,12 @@
                     <td>${i.getJoinTime()}</td>
                     <td>${i.getPhone()}</td>
                     <td><a href="/show.do?type=detail&id=${i.getId()}" class="btn btn-default btn-sm">查看详情</a></td>
-                    <td><a href="/alter.do?id=${i.getId()}&flag=0" class="btn btn-default btn-sm">修改</a></td>
+                    <td><a href="javascript:void(0)" class="btn btn-default btn-sm"   onclick="sendUrl('/alter.do?id=${i.getId()}&flag=0')">修改</a></td>
                     <td>
-                        <a href="/view/addMember.html" class="btn btn-default btn-sm">增加</a>
+                        <a href="javascript:void(0)" class="btn btn-warning btn-sm"  onclick="sendUrl('/view/addMember.html')">增加</a>
                     </td>
                     <td class="last">
-                        <a href="javascript:void(0)" onclick="del(${i.getId()},this)" class="btn btn-default btn-sm">删除</a>
+                        <a href="javascript:void(0)" onclick="del(${i.getId()},this)" class="btn btn-danger btn-sm">删除</a>
 
                     </td>
 
@@ -291,12 +315,17 @@
         <div><strong>共${pm.getTotalCount()}条记录，${pm.getTotalPage()}页</strong></div>
     </nav>
 
-    <button id="get">
-        获取所有信息
-    </button>
-    <button id="get2">
-        获取分页信息
-    </button>
+    <hgroup>
+        <button id="get"  class="btn btn-default btn-sm"  >
+            获取所有信息
+        </button>
+        <button id="get2"  class="btn btn-default btn-sm"  >
+            获取分页信息
+        </button>
+        <a href="javascript:void(0)"   class="btn btn-default btn-sm" onclick="sendUrl('/verify.do')">
+            审核注册
+        </a>
+    </hgroup>
 
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -313,6 +342,16 @@
 </html>
 
 <script>
+
+    function attention() {
+        var str=location.href; //取得整个地址栏
+        var num=str.indexOf("admin=false");
+        //如果显示 admin=false ,说明服务器显示 非管理员用户操作 数据库，提示用户并且 阻止
+        if(num>0) {
+            alert("您没有管理员权限,只能查看其他成员的信息哦");
+        }
+    }
+
     $(document).ready(function () {
 
         setTimeout(function () {
@@ -320,13 +359,6 @@
             if(b) {
                 //如果是显示 所有 人的消息的话，就不需要分页栏了
                 $("#show-nav").css({display:"none"});
-            }
-
-            var str=location.href; //取得整个地址栏
-            var num=str.indexOf("admin=false");
-            //如果显示 admin=false ,说明服务器显示 非管理员用户操作 数据库，提示用户并且 阻止
-            if(num>0) {
-                alert("抱歉，您没有管理员权限");
             }
 
 
@@ -474,7 +506,15 @@
 </script>
 
 
+<script>
 
+    function sendUrl(url) {
+        //提醒用户是否 为管理员，是否权限越界了
+        attention();
+        window.location.href=url;
+
+    }
+</script>
 
 
 
@@ -531,13 +571,6 @@
                 }
             }
 
-
-
-
-
-
-
-
         }
         );
 
@@ -561,25 +594,7 @@
 </script>
 
 <script>
-    <%-- 分页查询功能的实现 --%>
 
-//    $("#searchForPage").click(function () {
-//        $.ajax({
-//
-//                type:"post",
-//                url:"/findByPage.do",
-//                data:1,
-//                dataType:"json",
-//                success:function (msg) {
-//                    alert("dddd")
-//
-//                }
-//
-//
-//            }
-//        );
-//
-//    })
 </script>
 
 

@@ -23,7 +23,7 @@ public interface QueryTool {
      *
      * @return
      * */
-    int count(Map<String, String[]> conditon);
+    int count(Map<String, String[]> conditon,String... tableName);
 
     /**
      *
@@ -38,5 +38,5 @@ public interface QueryTool {
      * */
 
 
-    List<Member> findByPage(int start, int rows, Map<String, String[]> condition);
+    List<Member> findByPage(int start, int rows, Map<String, String[]> condition,String... tableName);
 }

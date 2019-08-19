@@ -39,10 +39,21 @@ public class ShowServlet extends HttpServlet {
                 e.printStackTrace();
             }
         }else if("detail".equals(type)) {
+            String tableName = request.getParameter("tableName");
+
 
             String id = request.getParameter("id");
             Dao dao = MemberDao.getInstance();
-            Member m = (Member)dao.QueryById2(id);
+            Member m = null;
+
+            if(tableName!=null&&tableName.equals("loginmember")) {
+                m = (Member)dao.QueryById2(id,tableName);
+
+            }else{
+                System.out.println("pass ");
+                m = (Member) dao.QueryById2(id);
+            }
+
 
             request.setAttribute("member",m);
             request.getRequestDispatcher("/view/detail.jsp").forward(request,response);

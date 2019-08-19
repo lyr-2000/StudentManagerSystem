@@ -8,6 +8,14 @@ package dao;
  *
  */
 public interface DeleteDao {
-    void deleteSelected(String[] arr);
+    /**
+     *
+     * 批量删除业务
+     * @param tableName 用户要操作的数据库表名字，如果没有，默认操作 member表
+     * @param arr 用户的 id 数组，通过id批量删除表的记录
+     *
+     * */
+    void deleteSelected(String[] arr,String...tableName);
+    void deleteChoose(String[] arr,String tableName);
 
 }

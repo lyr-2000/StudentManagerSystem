@@ -22,23 +22,23 @@ import java.io.IOException;
 public class AddMemberHandler extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-      String id= request.getParameter("id");
-      String name = request.getParameter("name");
-      String password= request.getParameter("password");
-      String sex= request.getParameter("sex");
-      String joinTime= request.getParameter("joinTime");
-      String work= request.getParameter("work");
-      String birthday= request.getParameter("birthday");
-      String subject= request.getParameter("subject");
-      String phone= request.getParameter("phone");
-      String signature= request.getParameter("signature");
-      //过滤用户信息，用户可能修改前台js脚本提交，后台再过滤一遍
-      if(filter(id,name,password,phone)==false) {
+        String id= request.getParameter("id");
+        String name = request.getParameter("name");
+        String password= request.getParameter("password");
+        String sex= request.getParameter("sex");
+        String joinTime= request.getParameter("joinTime");
+        String work= request.getParameter("work");
+        String birthday= request.getParameter("birthday");
+        String subject= request.getParameter("subject");
+        String phone= request.getParameter("phone");
+        String signature= request.getParameter("signature");
+        //过滤用户信息，用户可能修改前台js脚本提交，后台再过滤一遍
+        if(filter(id,name,password,phone)==false) {
 
-          JSONObject jsonObject = new JSONObject("{addAns:false,errNum:true}");
-          response.getOutputStream().write(jsonObject.toString().getBytes("utf-8"));
-          return;
-      }
+            JSONObject jsonObject = new JSONObject("{addAns:false,errNum:true}");
+            response.getOutputStream().write(jsonObject.toString().getBytes("utf-8"));
+            return;
+        }
 
       /*
       *
@@ -47,18 +47,18 @@ public class AddMemberHandler extends HttpServlet {
       *
       * */
 
-      Member member = new Member();
-      member.setId(id);
-      member.setName(name);
-      member.setBirthday(birthday);
-      member.setJoinTime(joinTime);
-      member.setPhone(phone);
-      member.setSex(sex);
-      member.setWork(work);
-      member.setSubject(subject);
-      member.setSignature(signature);
-      member.setPassword(password);
-      System.out.println("报告，我已经收到消息了");
+        Member member = new Member();
+        member.setId(id);
+        member.setName(name);
+        member.setBirthday(birthday);
+        member.setJoinTime(joinTime);
+        member.setPhone(phone);
+        member.setSex(sex);
+        member.setWork(work);
+        member.setSubject(subject);
+        member.setSignature(signature);
+        member.setPassword(password);
+        System.out.println("报告，我已经收到消息了");
 
 
 
@@ -68,26 +68,26 @@ public class AddMemberHandler extends HttpServlet {
       * */
         Dao dao = MemberDao.getInstance();
         JSONObject jsonObject = null;
-      try{
-        boolean b = dao.add(member);
-        if(b) {
+        try{
+            boolean b = dao.add(member);
+            if(b) {
             /*
             * 如果数据库显示提交成功，返回true,否则，数据库可能已经有这个人了，返回false
             *
             * */
-            jsonObject = new JSONObject("{addAns:true}");
-        }else{
-            jsonObject = new JSONObject("{addAns:false}");
+                jsonObject = new JSONObject("{addAns:true}");
+            }else{
+                jsonObject = new JSONObject("{addAns:false}");
+            }
+
+
+        }catch (Exception e) {
+            e.printStackTrace();
+            System.err.println("额，在 dao操作数据库添加操作时出现问题了，处理一下");
+            jsonObject = new JSONObject("{addAns:false,infos:false}");
+        }finally {
+            response.getOutputStream().write(jsonObject.toString().getBytes("utf-8"));
         }
-
-
-      }catch (Exception e) {
-        e.printStackTrace();
-        System.err.println("额，在 dao操作数据库添加操作时出现问题了，处理一下");
-        jsonObject = new JSONObject("{addAns:false,infos:false}");
-      }finally {
-          response.getOutputStream().write(jsonObject.toString().getBytes("utf-8"));
-      }
 
     }
 
@@ -106,8 +106,8 @@ public class AddMemberHandler extends HttpServlet {
      * @param  arr 不定长参数
      *
      * @return boolean
-    *
-    * */
+     *
+     * */
     public static boolean filter(String ... arr) {
         for(String i:arr) {
             if(i==null||i.equals("")||i.equals("null")) {

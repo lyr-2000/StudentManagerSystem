@@ -50,9 +50,9 @@ public class QueryForPage implements QueryTool {
      * @return
      */
     @Override
-    public int count(Map<String, String[]> conditon) {
+    public int count(Map<String, String[]> conditon,String... tableName) {
         //1.定义基础的 sql语句
-        String sql = "select count(*) from member where 1=1 ";
+        String sql = tableName==null||tableName.length!=1 ? "select count(*) from member where 1=1 ":"select count(*) from "+tableName[0] +" where 1=1 ";
         StringBuilder sb = new StringBuilder(sql);
 
         Iterator it = conditon.entrySet().iterator();
@@ -143,8 +143,14 @@ public class QueryForPage implements QueryTool {
      * @return
      */
     @Override
-    public List<Member> findByPage(int start, int rows, Map<String, String[]> condition) {
-        String sql = "select * from member where 1 = 1 ";
+    public List<Member> findByPage(int start, int rows, Map<String, String[]> condition,String... tableName) {
+        /*
+        *  service层传入对应的表名，如果没有传入表，就用默认表，tableName 主要是管理员审核 注册人员的表
+        *
+        * */
+        String sql = tableName==null||tableName.length!=1? "select * from member where 1 = 1 ":"select * from "+tableName[0]+" where 1 = 1 ";
+        System.out.println(sql);
+        System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
         StringBuilder sb = new StringBuilder(sql);
 
         //使用 entrySet 遍历

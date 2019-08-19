@@ -2,10 +2,7 @@ package dao.daoImpl;
 
 import bean.Member;
 import bean.PageForMember;
-import dao.Dao;
-import dao.QueryForPageDao;
-import dao.DeleteDao;
-import dao.LoginPlugin;
+import dao.*;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 import util.connectonUtil.JdbcUtil;
@@ -20,13 +17,12 @@ import java.util.List;
  */
 /**
  *
- * 写代码的时候我发现了一个问题，每次操作数据库就 实例化一个dao 出来，那么不如使用单例模式吧
  *
- * @param
- * @return
+ *
+ *
  *
  * */
-public class MemberDao implements Dao , DeleteDao, QueryForPageDao, LoginPlugin {
+public class MemberDao implements Dao , DeleteDao, QueryForPageDao, LoginPlugin , RegisterPlugin{
 
     private static MemberDao dao = null;
     static {
@@ -47,10 +43,14 @@ public class MemberDao implements Dao , DeleteDao, QueryForPageDao, LoginPlugin 
     }
 
 
-
+    /**
+     * @param member 用户传入的信息
+     * @param sqlCmd 上层调用传入的 sql语句，如果没有，使用默认的 sql语句
+     *
+     * */
 
     @Override
-    public boolean add(Object member)  {
+    public boolean add(Object member,String... sqlCmd)  {
         if (member instanceof Member) {
             Member m = (Member)member;
 
@@ -65,7 +65,7 @@ public class MemberDao implements Dao , DeleteDao, QueryForPageDao, LoginPlugin 
             }
 
 
-            String sql = "insert into member(id,name,sex,joinTime,work,birthday,subject,phone,signature,password) values(?,?,?,?,?,?,?,?,?,?)";
+            String sql = sqlCmd==null? "insert into member(id,name,sex,joinTime,work,birthday,subject,phone,signature,password,admin) values(?,?,?,?,?,?,?,?,?,?,?)" :sqlCmd[0];
             QueryRunner qr = QueryRunnerUtil.getQrConn();
             Object[] params={
               m.getId(),
@@ -77,9 +77,8 @@ public class MemberDao implements Dao , DeleteDao, QueryForPageDao, LoginPlugin 
               m.getSubject(),
               m.getPhone(),
               m.getSignature(),
-              m.getPassword()
-
-
+              m.getPassword(),
+              m.getAdmin()
 
             };
 
@@ -97,9 +96,12 @@ public class MemberDao implements Dao , DeleteDao, QueryForPageDao, LoginPlugin 
         return false;
 
     }
-    /*
+    /**
     *
     * 通过id进行删除
+     *
+     *
+     * @param member 封装了用户的 id信息
     * */
     @Override
     public void del(Object member) {
@@ -123,9 +125,9 @@ public class MemberDao implements Dao , DeleteDao, QueryForPageDao, LoginPlugin 
     }
 
 
-    /*
+    /**
     *
-    * 查询所有成员的信息
+    * 查询所有成员的信息（member表）
     *
     * */
     @Override
@@ -153,9 +155,18 @@ public class MemberDao implements Dao , DeleteDao, QueryForPageDao, LoginPlugin 
      * */
 
     @Override
-    public boolean QueryById(String id) {
+    public boolean QueryById(String id,String... tableNames) {
         String  sql = "select * from member where `id` = '";
         String end = id+"'";
+
+        //如果 service层有传入表名字，那么就按照指定的表名字来查询
+        if(tableNames!=null&&tableNames.length>0) {
+            String theTargetTable = tableNames[0];
+            sql = "select * from  "+theTargetTable+"  where `id` = '";
+        }
+
+
+        //最终的sql 查询语句
         String ans = sql + end;
 
         QueryRunner qr = QueryRunnerUtil.getQrConn();
@@ -184,8 +195,8 @@ public class MemberDao implements Dao , DeleteDao, QueryForPageDao, LoginPlugin 
      *
      * */
     @Override
-    public Member QueryById2(String id) {
-        String  sql = "select * from member where `id` = '";
+    public Member QueryById2(String id,String... tableName) {
+        String  sql = tableName==null||tableName.length!=1 ? "select * from member where `id` = '":"select * from loginmember where `id` = '";
         String end = id+"'";
         String ans = sql + end;
         QueryRunner qr = QueryRunnerUtil.getQrConn();
@@ -268,11 +279,27 @@ public class MemberDao implements Dao , DeleteDao, QueryForPageDao, LoginPlugin 
      *
      * 重写 deleteDao接口，解决批量删除的业务逻辑
      * @param arr  这是一个存放 用户 id 的数据，通过id 访问数据，并且删除 数据
-     *
+     * @param tableName 指定数据库表名，如果没有，就使用默认的表
      * */
     @Override
-    public void deleteSelected(String[] arr) {
+    public void deleteSelected(String[] arr,String... tableName) {
+        /*
+        *
+        * 删除给定 table中的数据
+        *
+        * */
+        String table = tableName==null||tableName.length!=1? "member":tableName[0];
+        if(!table.equals("member")) {
+            deleteChoose(arr,table);
 
+            return;
+        }
+
+        /*
+        *
+        * 删除 member表中的数据
+        *
+        * */
 
         for(String id: arr){
 
@@ -282,7 +309,29 @@ public class MemberDao implements Dao , DeleteDao, QueryForPageDao, LoginPlugin 
         }
     }
 
+    /**
+     *
+     * 多选删除
+     *
+     * @param tableName 操作的数据库表
+     * @param arr id 学号
+     *
+     *
+     * */
 
+    @Override
+    public void deleteChoose(String[] arr, String tableName) {
+        String sql = "delete from "+ tableName+" where `id`= ?";
+        QueryRunner qr = QueryRunnerUtil.getQrConn();
+        for(String id:arr) {
+            try {
+                qr.update(sql,id);
+            } catch (SQLException e) {
+                System.err.println("在 deleteChoose,也就是删除注册用户的时候出错");
+                e.printStackTrace();
+            }
+        }
+    }
 
     /**
      *
@@ -296,7 +345,7 @@ public class MemberDao implements Dao , DeleteDao, QueryForPageDao, LoginPlugin 
      * */
 
     @Override
-    public PageForMember QueryForPage(String currentPage, String  rows) {
+    public PageForMember QueryForPage(String currentPage, String  rows,String...tableName) {
          PageForMember pb = new PageForMember();
          int currentPage1 = Integer.parseInt(currentPage);
          int rows1 = Integer.parseInt(rows);
@@ -305,7 +354,7 @@ public class MemberDao implements Dao , DeleteDao, QueryForPageDao, LoginPlugin 
          int start = (currentPage1-1)*rows1;
 
 
-         List<Member> list = JdbcUtil.findByPage(start,rows1);
+         List<Member> list = JdbcUtil.findByPage(start,rows1,tableName);
 
          //获得 对象集合 并且封装成 PageForMember 对象的变量
          pb.setList(list);
@@ -316,7 +365,7 @@ public class MemberDao implements Dao , DeleteDao, QueryForPageDao, LoginPlugin 
          //------- ------- -------- --------- ------- ------- --------
 
         //设置总的数据量信息
-        pb.setTotalCount(this.getTotalCount());
+        pb.setTotalCount(this.getTotalCount(tableName));
 
          /*
          *
@@ -341,16 +390,16 @@ public class MemberDao implements Dao , DeleteDao, QueryForPageDao, LoginPlugin 
     /**
      *
      * 查询数据库中的记录总数
-     *
+     * @param tableName 掺入的数据库表名字，如果没有使用默认的 member表
      *
      * */
-    public int  getTotalCount() {
+    public int  getTotalCount(String... tableName) {
 
 
         /*
         * 查询数据库中的 记录数量
         * */
-        int count = JdbcUtil.count();
+        int count = JdbcUtil.count(tableName);
 
         return count;
     }
@@ -385,5 +434,57 @@ public class MemberDao implements Dao , DeleteDao, QueryForPageDao, LoginPlugin 
         List p = new ArrayList<>();
         p.add(new Member());
         return p;
+    }
+
+    /**
+     *
+     * 用户注册提交 事件处理
+     * @param m 用户注册是 提交的信息
+     *
+     * */
+
+    @Override
+    public boolean register(Member m) {
+
+
+        String id = m.getId();
+        boolean exist = this.QueryById(id,"loginmember")||this.QueryById(id);
+        //如果用户已经有过注册申请了，那么就拒绝重复注册
+        System.out.println("注册 "+exist);
+        if(exist) {
+            return false;
+        }else{
+
+            return registerInsert(m);
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+    /**
+     * @param m  用户注册的提交信息
+     * @return 用户注册提交信息，存放在logimMember表中，把信息插入该表 ，等待管理员审核
+     */
+    @Override
+    public boolean registerInsert(Member m) {
+        //默认表 就是 loginmember
+        String sql = "insert into loginmember(id,name,sex,joinTime,work,birthday,subject,phone,signature,password,admin) values(?,?,?,?,?,?,?,?,?,?,?)";
+        boolean b = this.add(m,sql);
+
+        return b;
     }
 }

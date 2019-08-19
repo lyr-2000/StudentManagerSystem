@@ -28,6 +28,12 @@ public class FilterForLogin implements Filter {
         Object loginUser = hrequest.getSession().getAttribute("loginUser");
         String uri = hrequest.getRequestURI();
 
+
+        if(uri.contains("verify.jsp")) {
+            chain.doFilter(req,resp);return;
+        }
+
+
         if(uri.contains("/login.do")||uri.contains("/checkCodeServlet")||uri.contains("/login.jsp")||uri.contains("/index.jsp")) {
             System.out.println("放行.....");
             chain.doFilter(hrequest,hresponse);

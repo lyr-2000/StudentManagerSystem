@@ -31,6 +31,13 @@ public class FilterForDataBase implements Filter {
         // String admin = self.getAdmin();
 
         String uri = httpServletRequest.getRequestURI();
+
+        if(uri.contains("verify.jsp")) {
+            chain.doFilter(req,resp);
+            return;
+        }
+
+        //))))))))))))))))))
         if(self==null) {
             /*
             * 有 FilterForLogin 进行拦截处理
@@ -52,7 +59,8 @@ public class FilterForDataBase implements Filter {
             int find1 = uri.indexOf("alter");
             int find2 = uri.indexOf("del");
             int find3 = uri.indexOf("add");
-            if(find1>0||find2>0||find3>0) {
+            int find4 = uri.indexOf("verify");
+            if(find1>0||find2>0||find3>0||find4>0) {
                 System.out.println("回去");
                 // httpServletResponse.sendRedirect("/show.do");
                 redirect(httpServletRequest,httpServletResponse,"/findByPage.do?admin=false");

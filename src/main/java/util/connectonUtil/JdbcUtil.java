@@ -123,9 +123,9 @@ public class JdbcUtil {
      * @see  util.serviceUtil.QueryForPage 有相应的方法，实现条件查询
      *
      * */
-    public static int count() {
+    public static int count(String... tableName) {
 
-        String sql = "select count(*) from member";
+        String sql =tableName==null||tableName.length!=1? "select count(*) from member":"select count(*) from "+tableName[0];
         Connection conn = QueryRunnerUtil.getConnection();
         PreparedStatement psmt = null;
         ResultSet rs = null;
@@ -167,9 +167,10 @@ public class JdbcUtil {
      * @return rows 行数
      *
      * */
-    public static List<Member> findByPage(int start,int rows/* 每页 rows 个 */) {
+    public static List<Member> findByPage(int start,int rows/* 每页 rows 个 */,String...tableName) {
         List<Member> list = null;
-        String sql = "select * from member limit ?,?";
+        String sql =tableName==null||tableName.length!=1?  "select * from member limit ?,?":"select * from "+tableName[0]+" limit ?,?";
+        System.err.println(sql);
         try{
 
             QueryRunner qr = QueryRunnerUtil.getQrConn();

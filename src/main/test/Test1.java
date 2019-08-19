@@ -101,6 +101,11 @@ public class Test1 {
         String s = "1234";
         System.out.println(s.indexOf("0"));
     }
+    @Test
+    public void str() {
+        System.out.println("AAna".toLowerCase());
+        System.out.println("A A".replace(" ",","));
+    }
 
 
 

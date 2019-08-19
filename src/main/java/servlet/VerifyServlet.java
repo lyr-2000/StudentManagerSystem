@@ -3,8 +3,9 @@ package servlet;
 import bean.Member;
 import bean.PageForMember;
 import dao.daoImpl.MemberDao;
-
+import org.apache.commons.dbutils.QueryRunner;
 import util.QueryTool;
+import util.connectonUtil.QueryRunnerUtil;
 import util.serviceUtil.QueryForPage;
 
 import javax.servlet.ServletException;
@@ -13,23 +14,31 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.*;
 
-
-
 /**
- * Created by ASUS on 2019/8/10.
+ * Created by ASUS on 2019/8/18.
  *
- * 普通的分页查询 或者条件 查询的事务
- *
+ * 管理员审核 注册用户是否通过
  *
  */
-@WebServlet(name = "Servlet4",urlPatterns = "/findByPage.do")
-public class FindByPageServlet extends HttpServlet {
+@WebServlet(name = "Servlet5",urlPatterns = "/verify.do")
+public class VerifyServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
         String search = request.getParameter("search");
-        System.err.println(search+"          dddddddddddddddddddddddd");
+
+        // 如果是通过 申请，那么就执行相应的操作 ，并且重新查询数据库，显示到页面
+        String pass = request.getParameter("pass");
+        if(pass!=null&&pass.equals("pass")) {
+            String id = request.getParameter("id");
+
+            if(id!=null) {
+                pass(id);
+                System.out.println("管理员审核通过  dd ");
+            }
+        }
+
 
 
         // search 是 空，说明不是 条件查询 的 请求
@@ -98,19 +107,21 @@ public class FindByPageServlet extends HttpServlet {
         if(flag.equals("1")) {
             //如何页数超了，会发来一个标记flag，如果flag是1 说明超了，要减回去
             int currentPage1 = Integer.parseInt(currentPage)-1;
+            System.out.println("进行分页查询");
 
 
-             String currentPage2 = String.valueOf(currentPage1);
+            String currentPage2 = String.valueOf(currentPage1);
 
 
-             pm = serviceDao.QueryForPage(currentPage2,rows);
+            pm = serviceDao.QueryForPage(currentPage2,rows,"loginmember");
 
             pm.setCurrentPage(currentPage1);
         }else{
             //按页数来查询
-            pm = serviceDao.QueryForPage(currentPage,rows);
+            pm = serviceDao.QueryForPage(currentPage,rows,"loginmember");
             int currentPage2 = Integer.parseInt(currentPage);
             pm.setCurrentPage(currentPage2);
+
         }
 
 
@@ -134,18 +145,18 @@ public class FindByPageServlet extends HttpServlet {
 
 
 
-        request.getRequestDispatcher("/view/showMember.jsp").forward(request,response);
+        request.getRequestDispatcher("/view/verify.jsp").forward(request,response);
         System.out.println("发送成功ddd");
 
 
 
-
     }
+
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        System.out.println("_____________________________________");
         doPost(request,response);
-
     }
+
+
 
     /**
      *
@@ -155,13 +166,21 @@ public class FindByPageServlet extends HttpServlet {
      *
      * */
     private void QueryByCondition(HttpServletRequest request,HttpServletResponse response) {
+        System.out.println("这很智能");
 
         String uName = request.getParameter("uName");
         String uId = request.getParameter("uId");
+        /*
+        *
+        * 将用户输入的多个 空格分隔符 取为一个分隔符，拆解条件进行 查询数据库的操作
+        *
+        * */
 
-        //正则表达式，将多个空格替换为单个空格，方便查询并拆解条件 进行解析
         uName = uName.replaceAll(" +"," ");
         uId = uId.replaceAll(" +"," ");
+        System.err.println(uName);
+        System.err.println(uId);
+
 
         String[] arr = new String[]{uName,uId};
 
@@ -173,22 +192,15 @@ public class FindByPageServlet extends HttpServlet {
             Set<String> a = insertionUtil(item1,item2,item3);
 
             if(i==0) {
-                if(a.size()>2) {
-                    a.remove(uName);
-                }
                 //放入名字
                 String[] p1 = a.toArray(new String[]{});
                 map.put("`name`",p1);
-                System.out.println(p1+"+++++++++++++++++++++++++++++++");
+
 
             }else{
-                if(a.size()>2) {
-                    a.remove(uId);
-                }
-                //放入学号
                 String[] p2 = a.toArray(new String[]{});
                 map.put("`id`",p2);
-                System.out.println(p2+"dddddddddddddddddddddddddddddddddddddd");
+
             }
         }
         System.err.println(map);
@@ -219,28 +231,30 @@ public class FindByPageServlet extends HttpServlet {
         if(flag.equals("1")) {
             //如何页数超了，会发来一个标记flag，如果flag是1 说明超了，要减回去
             int currentPage1 = Integer.parseInt(currentPage);
+            System.out.println("这很智能");
 
 
 
             int begin = (currentPage1-1)*row;
 
-            List<Member> mList = tool.findByPage(begin,row,map);
+            List<Member> mList = tool.findByPage(begin,row,map,"loginmember");
             pm.setList(mList);
 
             pm.setCurrentPage(currentPage1);
             pm.setRows(row);
         }else{
             /**
-             * 预留的代码块，预备其他状况
+             * 预留的代码块，预备其他状况，
              *
              * */
 
-            int t;
+
             int currentPage2 = Integer.parseInt(currentPage);
 
             int begin = (currentPage2-1)*row;
-            List<Member>mList = tool.findByPage(begin,row,map);
+            List<Member>mList = tool.findByPage(begin,row,map,"loginmember");
             pm.setList(mList);
+            System.out.println();
 
             pm.setCurrentPage(currentPage2);
             pm.setRows(row);
@@ -248,7 +262,7 @@ public class FindByPageServlet extends HttpServlet {
         }
         pm.setQueryStyle((byte) 1);
 
-        int totalCount = QueryForPage.getInstance().count(map);
+        int totalCount = QueryForPage.getInstance().count(map,"loginmember");
         pm.setTotalPage(totalCount%row==0?totalCount/row:totalCount/row+1);
         pm.setTotalCount(totalCount);
 
@@ -262,7 +276,7 @@ public class FindByPageServlet extends HttpServlet {
         request.setAttribute("uId",uId);
 
         try {
-            request.getRequestDispatcher("/view/showMember.jsp").forward(request,response);
+            request.getRequestDispatcher("/view/verify.jsp").forward(request,response);
             System.out.println("发送成功");
         } catch (ServletException e) {
             e.printStackTrace();
@@ -296,6 +310,43 @@ public class FindByPageServlet extends HttpServlet {
 
         return insertSet;
     }
+    /**
+     *
+     * @param id 用户id,管理员审核通过后，允许加入部落
+     *
+     * */
+
+    public boolean pass(String id) {
+        MemberDao dao = MemberDao.getInstance();
+        boolean exist = dao.QueryById(id);
+        if(exist) {
+            //如果存在，说明数据库已经有这个人了，拒绝通过，并且删除 tableName 表的数据
+            dao.deleteChoose(new String[]{id},"loginmember");
+            System.out.println("删除 loginmember 表成功");
+            return false;
+        }else{
+            // 如果查询 member 表中没有这个 id，就在 member中插入数据，并且删除 loginmember 的记录
+
+            String sql = "insert member select * from loginmember where `id`= '"+id+"'";
+            QueryRunner qr = QueryRunnerUtil.getQrConn();
+            try {
+
+                qr.update(sql);
+                dao.deleteChoose(new String[]{id},"loginmember");
+                System.err.println("删除成功");
+            } catch (SQLException e) {
+                System.err.println("在数据转移时发生问题了");
+                e.printStackTrace();
+            }
+
+
+
+
+            return true;
+        }
+    }
 
 
 }
+
+

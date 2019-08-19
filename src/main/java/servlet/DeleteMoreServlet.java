@@ -1,5 +1,6 @@
 package servlet;
 
+import bean.Member;
 import dao.daoImpl.MemberDao;
 import net.sf.json.JSONObject;
 
@@ -23,11 +24,21 @@ public class DeleteMoreServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 
-
+        System.err.println("删除消息收到");
         String[] idArray= request.getParameterValues("uids");
+        String tableName = request.getParameter("tableName");
+        if(tableName!=null&&tableName.equals("loginmember")) {
+            MemberDao dao = MemberDao.getInstance();
+            dao.deleteChoose(idArray,tableName);
+            System.err.println("tableName   ->  "+tableName);
+        }else{
+            MemberDao dao = MemberDao.getInstance();
+            dao.deleteSelected(idArray);
+            System.out.println("删除了 member 表");
+        }
+        System.out.println("在在");
 
-        MemberDao dao = MemberDao.getInstance();
-        dao.deleteSelected(idArray);
+
 
         Map map=new HashMap();
         map.put("ans",1);

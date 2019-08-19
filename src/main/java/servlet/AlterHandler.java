@@ -52,7 +52,8 @@ public class AlterHandler extends HttpServlet {
         String subject= request.getParameter("subject");
         String phone= request.getParameter("phone");
         String signature= request.getParameter("signature");
-        if(addMemberHandler.filter(id,name,password,phone)==false) {
+        String admin = request.getParameter("admin").equals("1")? "管理员":"普通成员";
+        if(AddMemberHandler.filter(id,name,password,phone)==false) {
 
             JSONObject jsonObject = new JSONObject("{update:0}");//发送0表示更新失败
             response.getOutputStream().write(jsonObject.toString().getBytes("utf-8"));
@@ -69,6 +70,8 @@ public class AlterHandler extends HttpServlet {
         member.setSubject(subject);
         member.setSignature(signature);
         member.setPassword(password);
+
+        member.setAdmin(admin);
         System.out.println("报告，我已经收到消息了11");
 
 
